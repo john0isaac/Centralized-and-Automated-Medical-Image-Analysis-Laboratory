@@ -1,1 +1,1 @@
-# Covid19-Detector-Website-Using-Neural-Networks
+# Centralized-and-Automated-Medical-Image-Analysis-Laboratory
