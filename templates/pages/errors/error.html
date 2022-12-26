@@ -1,0 +1,65 @@
+{% extends 'layouts/main.html' %} {% block title %}404 - CovDec{% endblock %}
+{% block content %}
+        <section class="error_area">
+            <div class="overlay_bg"></div>
+            <div class="container">
+                <div class="search_found_text text-center">
+                    <div class="error_text">4<img src="/static/images/covid19.png" alt>4</div>
+                    <h2>Something is wrong</h2>
+                    <p>The page you are looking for was moved, removed, renamed or might never existed.
+                        Try another search or go back to
+                        <a href>Homepage</a>
+                    </p>
+                    <form action="#" class="search-form input-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search">
+                        <span class="input-group-addon"><button type="submit">
+                                <i class="linearicons-magnifier"></i></button>
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="check_box_two">
+            <div class="container">
+                <div class="check_now_area check_now_box">
+                    <div class="row m-0 justify-content-between">
+                        <div class="left">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img src="/static/images/check-4.png" alt>
+                                    <img src="/static/images/check-5.png" alt>
+                                    <img src="/static/images/check-6.png" alt>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Think you might be affected?</h4>
+                                    <p>
+                                        Try our simple coronavirus checker to find out what you need
+                                        to do.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a class="icon_btn" href="#">Check now <i class="linearicons-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+{% block script %}
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/vendors/corona-live/dashboard.js"></script>
+    <script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
+    <script src="/static/vendors/slick/slick.min.js"></script>
+    <script src="/static/vendors/scroll-animation/jquery.parallax-scroll.js"></script>
+    <script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/static/js/jquery.validate.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+{% endblock %}
