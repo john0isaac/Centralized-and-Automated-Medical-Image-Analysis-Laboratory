@@ -4170,7 +4170,8 @@ button:focus {
 .about_features_item .round_icon {
     position: relative;
     z-index: 1;
-    margin-bottom: 54px
+    margin-bottom: 54px;
+    border-radius: 50%;
 }
 
 .about_features_item .round_icon:before {
@@ -6802,4 +6803,9 @@ blockquote {
 
 .footer_copyright h6 span {
     font-weight: 700
+}
+
+
+.our-images{
+    border-radius: 50%;
 }
