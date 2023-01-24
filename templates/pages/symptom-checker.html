@@ -196,7 +196,8 @@
                             <li>Follow recommendations for isolation.</li>
                             <li>Take precautions when you travel.</li>
                         </ul>
-                        <a class="green_btn" href="/symptom-checker"><i class="linearicons-pulse"></i> Make another check</a>
+                        <a class="green_btn" href="/symptom-checker"><i class="linearicons-pulse"></i> Make another
+                            check</a>
                     </div>
                 </div>
             </div>
@@ -214,10 +215,11 @@
             <div class="col-lg-4">
                 <div class="about_ques_item">
                     <h4>How do I know if I’m sick and what to do?</h4>
-                      <p>Based in the previously you will instantly get you result as positive or negative. If the test result is:</p>
+                    <p>Based in the previously you will instantly get you result as positive or negative. If the test
+                        result is:</p>
                     <p><strong>Positive</strong> - the virus was detected in the sample.</p>
-                     <p><strong>Negative</strong>  - the virus was not detected in the sample.</p>
-                     <p>Please call <b>123</b> immediately and<br> ask for an ambulance.</p>
+                    <p><strong>Negative</strong> - the virus was not detected in the sample.</p>
+                    <p>Please call <b>123</b> immediately and<br> ask for an ambulance.</p>
                     <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
                 </div>
             </div>
@@ -231,14 +233,15 @@
                         you know what that feels like. These are symptoms - which can only be described by the
                         person experiencing them.
                     </p>
-                   <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="about_ques_item">
                     <h4>How safe and accurate are covid detector?</h4>
-                    <p>Our model accuacy is up to <b>0.94%</b>We are also obtaining <b>100%</b> sensitivity and <b>90%</b>
-                        specificity implying that Patients that do have COVID-19 (i.e., true positives), we could 
+                    <p>Our model accuacy is up to <b>0.94%</b>We are also obtaining <b>100%</b> sensitivity and
+                        <b>90%</b>
+                        specificity implying that Patients that do have COVID-19 (i.e., true positives), we could
                         identify them as “COVID-19 positive” <b>94%</b> of the time using our model, Where Patients
                         that do not have COVID-19 (i.e., true negatives), we could accurately identify them as
                         “COVID-19 negative” only <b>93%</b> of the time using our model.
@@ -255,9 +258,11 @@
                 <div class="media-body">
                     <h4>Disclaimer</h4>
                     <p>Copyright (C) COVDEC Systems, Org - All Rights Reserved.
-                        Unauthorized copying of this file, via any medium is strictly prohibited Proprietary and confidential. 
+                        Unauthorized copying of this file, via any medium is strictly prohibited Proprietary and
+                        confidential.
                     </p>
-                    <p>Written by <a href="http://johnaziz.herokuapp.com/">John Aziz</a>, <a href="https://omarkhalil.herokuapp.com/">Omar Khalil</a>, May 2022.
+                    <p>Written by <a href="http://johnaziz.herokuapp.com/">John Aziz</a>, <a
+                            href="https://omarkhalil.herokuapp.com/">Omar Khalil</a>, May 2022.
                     </p>
                 </div>
             </div>
@@ -285,10 +290,12 @@
             <div class="col-lg-6">
                 <div class="mail_box">
                     <div class="input-group">
-                        <input id="news-letter-email" type="text" class="form-control" placeholder="&#xe997; Enter your email"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <input id="news-letter-email" type="text" class="form-control"
+                            placeholder="&#xe997; Enter your email" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="newsletterSubscribe();">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                onclick="newsletterSubscribe();">
                                 <i class="linearicons-arrow-right"></i>
                             </button>
                         </div>
@@ -306,58 +313,58 @@
 {% endblock %}
 {% block script %}
 <script>
-    function submitUpload(){
+    function submitUpload() {
         // your code start here
         var data = new FormData()
         data.append('files', file) // maybe it should be '{target}_cand'
         data.append('name', file.name)
 
         let url = "/prediction"
-        fetch(url,{
-            method:'POST',
+        fetch(url, {
+            method: 'POST',
             body: data,
         })
-        .then(function(response){
-        return response.json()
-        })
-        .then(function(res){
-            var elements = document.querySelectorAll(".second.circle");
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (res) {
+                var elements = document.querySelectorAll(".second.circle");
 
-            Array.prototype.slice.apply(elements).forEach(function (el) {
-            var $el = $(el);
-        
-            $el.circleProgress({ value: 0 });
-        
-            new Waypoint({
-                element: el,
-                handler: function () {
-                $el
-                    .circleProgress({
-                    value: $el.data("value"),
-                    value: Math.round(res.percentage)/100,
-                    size: 210,
-                    thickness: 16,
-                    startAngle: 5,
-                    emptyFill: "rgba(0, 0, 0, .0)",
-                    fill: {
-                        gradient: ["#f9570c", "#eac60a"],
-                    },
-                    })
-                    .on("circle-animation-progress", function (event, progress) {
-                    $(this)
-                        .find("strong")
-                        .html(Math.round(res.percentage * progress) + "<i>%</i>");
+                Array.prototype.slice.apply(elements).forEach(function (el) {
+                    var $el = $(el);
+
+                    $el.circleProgress({ value: 0 });
+
+                    new Waypoint({
+                        element: el,
+                        handler: function () {
+                            $el
+                                .circleProgress({
+                                    value: $el.data("value"),
+                                    value: Math.round(res.percentage) / 100,
+                                    size: 210,
+                                    thickness: 16,
+                                    startAngle: 5,
+                                    emptyFill: "rgba(0, 0, 0, .0)",
+                                    fill: {
+                                        gradient: ["#f9570c", "#eac60a"],
+                                    },
+                                })
+                                .on("circle-animation-progress", function (event, progress) {
+                                    $(this)
+                                        .find("strong")
+                                        .html(Math.round(res.percentage * progress) + "<i>%</i>");
+                                });
+                            this.destroy();
+                        },
+                        offset: "80%",
                     });
-                this.destroy();
-                },
-                offset: "80%",
-            });
-            });
-            let text = res.prediction;
-            document.getElementById("covid-status").innerText = text;
-        })
+                });
+                let text = res.prediction;
+                document.getElementById("covid-status").innerText = text;
+            })
     };
-    function cancelUpload(){
+    function cancelUpload() {
         //selecting all required elements
         var dropArea = document.querySelector(".drag-area");
         var uploadedImage = dropArea.querySelector("#uploaded-image");
@@ -372,71 +379,71 @@
         var dragText = dropArea.querySelector(".drag-drop");
         var button = dropArea.querySelector(".upload-btn");
         var input = dropArea.querySelector(".upload-file");
-        button.onclick = ()=>{
-        input.click(); //if user click on the button then the input also clicked
+        button.onclick = () => {
+            input.click(); //if user click on the button then the input also clicked
         }
-        input.addEventListener("change", function(){
-        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-        file = this.files[0];
-        fileName = file.name;
-        dropArea.classList.add("active");
-        showFile(); //calling function
+        input.addEventListener("change", function () {
+            //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+            file = this.files[0];
+            fileName = file.name;
+            dropArea.classList.add("active");
+            showFile(); //calling function
         });
         //If user Drag File Over DropArea
-        dropArea.addEventListener("dragover", (event)=>{
-        event.preventDefault(); //preventing from default behaviour
-        dropArea.classList.add("active");
-        dragText.textContent = "Release to Upload File";
+        dropArea.addEventListener("dragover", (event) => {
+            event.preventDefault(); //preventing from default behaviour
+            dropArea.classList.add("active");
+            dragText.textContent = "Release to Upload File";
         });
         //If user leave dragged File from DropArea
-        dropArea.addEventListener("dragleave", ()=>{
-        dropArea.classList.remove("active");
-        dragText.textContent = "Drag & Drop to Upload File";
-        });
-        //If user drop File on DropArea
-        dropArea.addEventListener("drop", (event)=>{
-        event.preventDefault(); //preventing from default behaviour
-        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-        file = event.dataTransfer.files[0];
-        fileName = file.name;
-        showFile(); //calling function
-        });
-        function showFile(){
-        let fileType = file.type; //getting selected file type
-        let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
-        if(validExtensions.includes(fileType)){ //if user selected file is an image file
-            let fileReader = new FileReader(); //creating new FileReader object
-            fileReader.onload = ()=>{
-            let fileURL = fileReader.result; //passing user file source in fileURL variable
-            let imgTag = `<img id="uploaded-image" src="${fileURL}" alt="${file.name}">`; //creating an img tag and passing user selected file source inside src attribute
-            dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
-            }
-            fileReader.readAsDataURL(file);
-        }else{
-            alert("This is not an Image File!");
+        dropArea.addEventListener("dragleave", () => {
             dropArea.classList.remove("active");
             dragText.textContent = "Drag & Drop to Upload File";
-        }
+        });
+        //If user drop File on DropArea
+        dropArea.addEventListener("drop", (event) => {
+            event.preventDefault(); //preventing from default behaviour
+            //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+            file = event.dataTransfer.files[0];
+            fileName = file.name;
+            showFile(); //calling function
+        });
+        function showFile() {
+            let fileType = file.type; //getting selected file type
+            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+            if (validExtensions.includes(fileType)) { //if user selected file is an image file
+                let fileReader = new FileReader(); //creating new FileReader object
+                fileReader.onload = () => {
+                    let fileURL = fileReader.result; //passing user file source in fileURL variable
+                    let imgTag = `<img id="uploaded-image" src="${fileURL}" alt="${file.name}">`; //creating an img tag and passing user selected file source inside src attribute
+                    dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+                }
+                fileReader.readAsDataURL(file);
+            } else {
+                alert("This is not an Image File!");
+                dropArea.classList.remove("active");
+                dragText.textContent = "Drag & Drop to Upload File";
+            }
         }
     };
-    function newsletterSubscribe(){
+    function newsletterSubscribe() {
         fetch('/newsletter-subscribe', {
-                method: 'POST', 
-                body: JSON.stringify({ 
+            method: 'POST',
+            body: JSON.stringify({
                 'email': document.getElementById("news-letter-email").value
             }),
             headers: {
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
-            }).then(function(response){
-                return response.json();
-            }).then(function(jsonResponse){
-                if(jsonResponse['success'] == true){
+        }).then(function (response) {
+            return response.json();
+        }).then(function (jsonResponse) {
+            if (jsonResponse['success'] == true) {
                 console.log();
-                }
-            }).catch(function(error){
-                console.log();
-            });
+            }
+        }).catch(function (error) {
+            console.log();
+        });
     };
 </script>
 
