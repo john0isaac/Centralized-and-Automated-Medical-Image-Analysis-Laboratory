@@ -620,6 +620,7 @@ video {
 
 img {
     border-style: none;
+    
 }
 
 audio,
@@ -632,6 +633,7 @@ svg,
 video {
     display: block;
     vertical-align: middle;
+    
 }
 
 button,
@@ -807,3 +809,5 @@ textarea {
     font-size: 1.125rem;
     line-height: 1.7777778;
 }
+
+
