@@ -1,11 +1,11 @@
-{% extends 'layouts/dark.html' %} {% block title %}Covid Checker - CA-MIL{% endblock %}
+{% extends 'layouts/dark.html' %} {% block title %}Lung Cancer Checker - CA-MIL{% endblock %}
 {% block content %}
 <section class="breadcrumb_area dark_breadcrumb">
     <img class="tp_img" src="/static/images/breadcrumb/checker-banner-map.png" alt>
     <div class="container">
         <div class="breadcrumb_text">
             <h6>You are not feeling well?</h6>
-            <h3>Coronavirus Covid Checker</h3>
+            <h3>Lung Cancer Checker</h3>
         </div>
         <div class="row checker_box_inner">
             <div class="col-lg-6">
@@ -103,9 +103,9 @@
                         checker can help you identify whether you need to seek immediate medical attention.
                     </p>
                     <p>Our online symptom checker is a deep learning-based system for the persuasive
-                        classification and reliable detection of COVID-19 using chest radiography that
+                        classification and reliable detection of Lung Cancer using CT scan that
                         provide the user with a real-time classification for his chest radiography
-                        and show a result whether it's negative or positive.
+                        and show a result whether it's s.
                     </p>
                     <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
                 </div>
@@ -116,7 +116,7 @@
                         <div class="home_ab_item ">
                             <h4>How to use it?</h4>
                             <p><b>Use the symptom checker form which is above:</b></p>
-                            <p>1- Upload your chest (X-ray) radiograph.</p>
+                            <p>1- Upload your chest (CT-Scan) radiograph.</p>
                             <p>2- Click on upload.</p>
                             <p>3- Wait until your test result appears.</p>
                         </div>
@@ -169,34 +169,24 @@
                 <div class="result_inner_text">
                     <div class="result_item">
                         <h4>Possible diagnoses</h4>
-                        <p>We have 2 different Scenarios, Classified as Healthy (Positive), and COVID-19 (Negative).</p>
+                        <p>We have 3 different Scenarios, Classified as Healthy (Normal), Has a benign tumor (Benign), and Infected (Malignant).</p>
                     </div>
                     <div class="result_item">
                         <h4>Description</h4>
                         <p>
-                            <strong>COVID-19 test results are reported as positive or negative. If the test result
+                            <strong>Lung Cancer test results are reported as normal or benign or malignant. If the test result
                                 is:</strong>
                         </p>
-                        <p>1- <strong>Positive</strong> - the virus was detected in the sample.</p>
-                        <p>2- <strong>Negative</strong> - the virus was not detected in the sample.</p>
+                        <p>1- <strong>Normal</strong> - lung cancer was detected in the sample.</p>
+                        <p>2- <strong>Benign</strong> - a tumor has been detected detected in the sample.</p>
+                        <p>3- <strong>Malignant</strong> - lung cancer was detected in the sample.</p>
                     </div>
                     <div class="result_item">
                         <h4>Suggestion</h4>
                         <ul>
-                            <li>Get Vaccinated and stay up to date on your COVID-19 vaccines.</li>
-                            <li>Wear a mask.</li>
-                            <li>Stay 6 feet away from others.</li>
-                            <li>Avoid poorly ventilated spaces and crowds.</li>
-                            <li>Test to prevent spread to others.</li>
-                            <li>Wash your hands often.</li>
-                            <li>Cover coughs and sneezes.</li>
-                            <li>Clean and disinfect.</li>
-                            <li>Monitor your health daily.</li>
-                            <li>Follow recommendations for quarantine.</li>
-                            <li>Follow recommendations for isolation.</li>
-                            <li>Take precautions when you travel.</li>
+                            <li>Head to the nearest hospital </li>
                         </ul>
-                        <a class="green_btn" href="/symptom-checker"><i class="linearicons-pulse"></i> Make another
+                        <a class="green_btn" href="/symptom-checker-lung"><i class="linearicons-pulse"></i> Make another
                             check</a>
                     </div>
                 </div>
@@ -205,7 +195,7 @@
     </div>
 </section>
 
-
+<!--
 <section class="about_question_area">
     <div class="container">
         <div class="main_title text-center">
@@ -220,7 +210,7 @@
                     <p><strong>Positive</strong> - the virus was detected in the sample.</p>
                     <p><strong>Negative</strong> - the virus was not detected in the sample.</p>
                     <p>Please call <b>123</b> immediately and<br> ask for an ambulance.</p>
-                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                    <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -233,7 +223,7 @@
                         you know what that feels like. These are symptoms - which can only be described by the
                         person experiencing them.
                     </p>
-                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                     <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -246,7 +236,7 @@
                         that do not have COVID-19 (i.e., true negatives), we could accurately identify them as
                         “COVID-19 negative” only <b>93%</b> of the time using our model.
                     </p>
-                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                    <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -269,7 +259,7 @@
         </div>
     </div>
 </section>
-
+ -->
 <section class="subscribe_area">
     <div class="container">
         <div class="row">
@@ -282,7 +272,7 @@
                         <h4>Subscribe our newsletter</h4>
                         <p>
                             Join our subscribers list to get latest news and updates
-                            about COVID-19 delivered directly in your inbox.
+                            about CA-MIL delivered directly in your inbox.
                         </p>
                     </div>
                 </div>
