@@ -1,0 +1,472 @@
+{% extends 'layouts/dark.html' %} {% block title %}Covid Checker - CA-MIL{% endblock %}
+{% block content %}
+<section class="breadcrumb_area dark_breadcrumb">
+    <img class="tp_img" src="/static/images/breadcrumb/checker-banner-map.png" alt>
+    <div class="container">
+        <div class="breadcrumb_text">
+            <h6>You are not feeling well?</h6>
+            <h3>Coronavirus Covid Checker</h3>
+        </div>
+        <div class="row checker_box_inner">
+            <div class="col-lg-6">
+                <div class="checker_simple_text">
+                    <h3>Fill the simple form below</h3>
+                    <p>Enter more symptoms for more accurate results, starting with your most severe symptom.
+                        Look through a list of common symptoms.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <i class="linearicons-lifebuoy"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>We help you</h4>
+                                    <p>Our experts gives you advice</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <i class="linearicons-finger-tap"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Easy to use</h4>
+                                    <p>2 steps, it’s quite simple</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <i class="linearicons-tags"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>100% FREE</h4>
+                                    <p>Don’t worry about the cost</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <i class="linearicons-bubble-question"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Got questions?</h4>
+                                    <p>Contact us, we answer you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="checker_form" id="checker-form">
+                    <div class="drag-area row text-center justify-content-center">
+                        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <header class="drag-drop">Drag & Drop to Upload File</header>
+                        <span>OR</span>
+                        <button class="upload-btn">Browse File</button>
+                        <input id="fileUpload" class="upload-file" type="file" hidden>
+                    </div>
+                    <div class="row">
+                        <div class="col button text-left">
+                            <button id="cancel-upload" onclick="cancelUpload()" class="submit_btn">Cancel</button>
+                        </div>
+                        <div class="col button text-right">
+                            <button id="submit-upload" onclick="submitUpload()" class="submit_btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="home_about_corona">
+    <div class="container">
+        <!--
+        <div class="danger_box alert-danger">
+            <p><i class="linearicons-warning"></i> The symptom checker results show a list of possible
+                conditions, not an actual diagnosis. Consult
+                your doctor if you are concerned.</p>
+        </div>
+        -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="symptom_instruction_text">
+                    <h4>Instruction</h4>
+                    <p>If you’re feeling under the weather but aren’t sure what it could be, an online symptom
+                        checker can help you identify whether you need to seek immediate medical attention.
+                    </p>
+                    <p>Our online symptom checker is a deep learning-based system for the persuasive
+                        classification and reliable detection of COVID-19 using chest radiography that
+                        provide the user with a real-time classification for his chest radiography
+                        and show a result whether it's negative or positive.
+                    </p>
+                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="home_ab_text how_to_use">
+                    <div class="home_ab_text_inner">
+                        <div class="home_ab_item ">
+                            <h4>How to use it?</h4>
+                            <p><b>Use the symptom checker form which is above:</b></p>
+                            <p>1- Upload your chest (X-ray) radiograph.</p>
+                            <p>2- Click on upload.</p>
+                            <p>3- Wait until your test result appears.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="result_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="result_box">
+                    <h4>Results</h4>
+                    <!--
+                    <ul class="nav flex-column">
+                        <li>
+                            <span>Symptoms:</span>
+                            <a class="tag" href="#">damaged lung</a>
+                        </li>
+                        <li>
+                            <span>Gender:</span>
+                            <a href="#">Female</a>
+                        </li>
+                        <li>
+                            <span>Age range:</span>
+                            <a href="#">25-30 yrs</a>
+                        </li>
+                        <li>
+                            <span>Region:</span>
+                            <a href="#">Egypt</a>
+                        </li>
+                    </ul>
+                    -->
+                    <div class="circle_inner">
+                        <div class="second circle">
+                            <strong></strong>
+                        </div>
+                    </div>
+                    <div class="bottom_text text-center">
+                        <h6>Estimable state:</h6>
+                        <h3 id="covid-status">Not Determined!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="result_inner_text">
+                    <div class="result_item">
+                        <h4>Possible diagnoses</h4>
+                        <p>We have 2 different Scenarios, Classified as Healthy (Positive), and COVID-19 (Negative).</p>
+                    </div>
+                    <div class="result_item">
+                        <h4>Description</h4>
+                        <p>
+                            <strong>COVID-19 test results are reported as positive or negative. If the test result
+                                is:</strong>
+                        </p>
+                        <p>1- <strong>Positive</strong> - the virus was detected in the sample.</p>
+                        <p>2- <strong>Negative</strong> - the virus was not detected in the sample.</p>
+                    </div>
+                    <div class="result_item">
+                        <h4>Suggestion</h4>
+                        <ul>
+                            <li>Get Vaccinated and stay up to date on your COVID-19 vaccines.</li>
+                            <li>Wear a mask.</li>
+                            <li>Stay 6 feet away from others.</li>
+                            <li>Avoid poorly ventilated spaces and crowds.</li>
+                            <li>Test to prevent spread to others.</li>
+                            <li>Wash your hands often.</li>
+                            <li>Cover coughs and sneezes.</li>
+                            <li>Clean and disinfect.</li>
+                            <li>Monitor your health daily.</li>
+                            <li>Follow recommendations for quarantine.</li>
+                            <li>Follow recommendations for isolation.</li>
+                            <li>Take precautions when you travel.</li>
+                        </ul>
+                        <a class="green_btn" href="/symptom-checker"><i class="linearicons-pulse"></i> Make another
+                            check</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about_question_area">
+    <div class="container">
+        <div class="main_title text-center">
+            <h2>Questions & Answers</h2>
+        </div>
+        <div class="row about_ques_inner">
+            <div class="col-lg-4">
+                <div class="about_ques_item">
+                    <h4>How do I know if I’m sick and what to do?</h4>
+                    <p>Based in the previously you will instantly get you result as positive or negative. If the test
+                        result is:</p>
+                    <p><strong>Positive</strong> - the virus was detected in the sample.</p>
+                    <p><strong>Negative</strong> - the virus was not detected in the sample.</p>
+                    <p>Please call <b>123</b> immediately and<br> ask for an ambulance.</p>
+                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="about_ques_item">
+                    <h4>What’s the difference between a sign and a symptom?</h4>
+                    <p>‘Sign’ and ‘symptom’ are often used interchangeably, but if we’re going to be pedantic,
+                        they do actually mean different things.
+                        If you’re feeling ill it might not be immediately obvious to somebody looking at you
+                        that you’re sick. For instance, if you’re experiencing pain, fatigue or dizziness, only
+                        you know what that feels like. These are symptoms - which can only be described by the
+                        person experiencing them.
+                    </p>
+                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="about_ques_item">
+                    <h4>How safe and accurate are covid detector?</h4>
+                    <p>Our model accuacy is up to <b>0.94%</b>We are also obtaining <b>100%</b> sensitivity and
+                        <b>90%</b>
+                        specificity implying that Patients that do have COVID-19 (i.e., true positives), we could
+                        identify them as “COVID-19 positive” <b>94%</b> of the time using our model, Where Patients
+                        that do not have COVID-19 (i.e., true negatives), we could accurately identify them as
+                        “COVID-19 negative” only <b>93%</b> of the time using our model.
+                    </p>
+                    <!-- <a class="text_btn" href="#">Read more <i class="linearicons-arrow-right"></i></a> -->
+                </div>
+            </div>
+        </div>
+        <div class="warning_box alert-warning">
+            <div class="media">
+                <div class="d-flex">
+                    <i class="linearicons-notification"></i>
+                </div>
+                <div class="media-body">
+                    <h4>Disclaimer</h4>
+                    <p>Copyright (C) CA-MIL Systems, Org - All Rights Reserved.
+                        Unauthorized copying of this file, via any medium is strictly prohibited Proprietary and
+                        confidential.
+                    </p>
+                    <p>Written by <a href="http://johnaziz.herokuapp.com/">John Aziz</a>, <a
+                            href="https://omarkhalil.herokuapp.com/">Omar Khalil</a>, May 2022.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="subscribe_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="media">
+                    <div class="d-flex">
+                        <i class="linearicons-mailbox-full"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4>Subscribe our newsletter</h4>
+                        <p>
+                            Join our subscribers list to get latest news and updates
+                            about COVID-19 delivered directly in your inbox.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mail_box">
+                    <div class="input-group">
+                        <input id="news-letter-email" type="text" class="form-control"
+                            placeholder="&#xe997; Enter your email" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                onclick="newsletterSubscribe();">
+                                <i class="linearicons-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <label class="container-checkbox">I accept the <span>Privacy Policy.</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block script %}
+<script>
+    function submitUpload() {
+        // your code start here
+        var data = new FormData()
+        data.append('files', file) // maybe it should be '{target}_cand'
+        data.append('name', file.name)
+
+        let url = "/prediction"
+        fetch(url, {
+            method: 'POST',
+            body: data,
+        })
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (res) {
+                var elements = document.querySelectorAll(".second.circle");
+
+                Array.prototype.slice.apply(elements).forEach(function (el) {
+                    var $el = $(el);
+
+                    $el.circleProgress({ value: 0 });
+
+                    new Waypoint({
+                        element: el,
+                        handler: function () {
+                            $el
+                                .circleProgress({
+                                    value: $el.data("value"),
+                                    value: Math.round(res.percentage) / 100,
+                                    size: 210,
+                                    thickness: 16,
+                                    startAngle: 5,
+                                    emptyFill: "rgba(0, 0, 0, .0)",
+                                    fill: {
+                                        gradient: ["#f9570c", "#eac60a"],
+                                    },
+                                })
+                                .on("circle-animation-progress", function (event, progress) {
+                                    $(this)
+                                        .find("strong")
+                                        .html(Math.round(res.percentage * progress) + "<i>%</i>");
+                                });
+                            this.destroy();
+                        },
+                        offset: "80%",
+                    });
+                });
+                let text = res.prediction;
+                document.getElementById("covid-status").innerText = text;
+            })
+    };
+    function cancelUpload() {
+        //selecting all required elements
+        var dropArea = document.querySelector(".drag-area");
+        var uploadedImage = dropArea.querySelector("#uploaded-image");
+        var newArea = `<div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <header class="drag-drop">Drag & Drop to Upload File</header>
+                        <span>OR</span>
+                        <button class="upload-btn">Browse File</button>
+                        <input id="fileUpload" class="upload-file" type="file" hidden>`;
+        dropArea.classList.remove("active");
+        dropArea.removeChild(uploadedImage);
+        dropArea.insertAdjacentHTML("afterbegin", newArea);
+        var dragText = dropArea.querySelector(".drag-drop");
+        var button = dropArea.querySelector(".upload-btn");
+        var input = dropArea.querySelector(".upload-file");
+        button.onclick = () => {
+            input.click(); //if user click on the button then the input also clicked
+        }
+        input.addEventListener("change", function () {
+            //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+            file = this.files[0];
+            fileName = file.name;
+            dropArea.classList.add("active");
+            showFile(); //calling function
+        });
+        //If user Drag File Over DropArea
+        dropArea.addEventListener("dragover", (event) => {
+            event.preventDefault(); //preventing from default behaviour
+            dropArea.classList.add("active");
+            dragText.textContent = "Release to Upload File";
+        });
+        //If user leave dragged File from DropArea
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("active");
+            dragText.textContent = "Drag & Drop to Upload File";
+        });
+        //If user drop File on DropArea
+        dropArea.addEventListener("drop", (event) => {
+            event.preventDefault(); //preventing from default behaviour
+            //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+            file = event.dataTransfer.files[0];
+            fileName = file.name;
+            showFile(); //calling function
+        });
+        function showFile() {
+            let fileType = file.type; //getting selected file type
+            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+            if (validExtensions.includes(fileType)) { //if user selected file is an image file
+                let fileReader = new FileReader(); //creating new FileReader object
+                fileReader.onload = () => {
+                    let fileURL = fileReader.result; //passing user file source in fileURL variable
+                    let imgTag = `<img id="uploaded-image" src="${fileURL}" alt="${file.name}">`; //creating an img tag and passing user selected file source inside src attribute
+                    dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+                }
+                fileReader.readAsDataURL(file);
+            } else {
+                alert("This is not an Image File!");
+                dropArea.classList.remove("active");
+                dragText.textContent = "Drag & Drop to Upload File";
+            }
+        }
+    };
+    function newsletterSubscribe() {
+        fetch('/newsletter-subscribe', {
+            method: 'POST',
+            body: JSON.stringify({
+                'email': document.getElementById("news-letter-email").value
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(function (response) {
+            return response.json();
+        }).then(function (jsonResponse) {
+            if (jsonResponse['success'] == true) {
+                console.log();
+            }
+        }).catch(function (error) {
+            console.log();
+        });
+    };
+</script>
+
+<script src="/static/js/upload.js"></script>
+<script src="/static/js/jquery-3.4.1.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<!-- <script src="/static/vendors/corona-live/dashboard.js"></script> -->
+<script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
+<script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
+<script src="/static/vendors/slick/slick.min.js"></script>
+<script src="/static/vendors/scroll-animation/jquery.parallax-scroll.js"></script>
+<script src="/static/vendors/taging-js/tagsinput.js"></script>
+<script src="/static/vendors/nice-selector/js/jquery.nice-select.min.js"></script>
+<script src="/static/vendors/counterup/jquery.waypoints.min.js"></script>
+<script src="/static/vendors/circle-progress/circle-progress.min.js"></script>
+<script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/static/vendors/animate-css/wow.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEQhXdvO2Yz16kSBaeBzLt7wWRkECXmlg"></script>
+<script src="/static/js/gmaps.min.js"></script>
+<script src="/static/js/map-active.js"></script>
+<script src="/static/js/circle-progress.js"></script>
+<script src="/static/js/jquery.validate.min.js"></script>
+<script src="/static/js/theme.js"></script>
+{% endblock %}

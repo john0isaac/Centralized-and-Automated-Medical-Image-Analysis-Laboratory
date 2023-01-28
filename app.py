@@ -114,9 +114,17 @@ def create_app(test_config=None):
     def symptom_page():
         return render_template("pages/symptom.html")
    
-    @app.route("/symptom-checker")
-    def symptom_checker_page():
-        return render_template("pages/symptom-checker.html")
+    @app.route("/symptom-checker-lung")
+    def symptom_checker_lung_page():
+        return render_template("pages/symptom-checker-lung.html")
+    
+    @app.route("/symptom-checker-covid")
+    def symptom_checker_covid_page():
+        return render_template("pages/symptom-checker-covid.html")
+    
+    @app.route("/symptom-checker-pneumonia")
+    def symptom_checker__pneumonia_page():
+        return render_template("pages/symptom-checker-pneumonia.html")
 
     @app.route("/virus-checker")
     def virus_checker_page():
