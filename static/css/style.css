@@ -6809,3 +6809,10 @@ blockquote {
 .our-images{
     border-radius: 50%;
 }
+
+/* This is img in main page moved down by 200 px  */
+
+.img-fluid{
+    margin-top:200px;
+    margin-left:100px;
+}
