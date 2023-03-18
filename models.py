@@ -148,3 +148,74 @@ class Vaccine_Centers(db.Model):
         }
 
 
+'''
+Contact_Us
+'''
+
+
+class Contact_Us(db.Model):
+    ___tablename__ = 'contact_us'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(50))
+    phone = Column(String(40))
+    email = Column(String(100))
+    message = Column(String(100))
+
+    def __init__(self, name, phone, email, message):
+        self.name = name
+        self.phone = phone
+        self.email = email
+        self.message = message
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'phone': self.phone,
+            'email': self.email,
+            'message': self.message
+        }
+
+  
+'''
+News_Letter
+'''
+
+
+class News_Letter(db.Model):
+    ___tablename__ = 'news_letter'
+
+    id = Column(Integer, primary_key=True)
+    email = Column(String(100))
+
+    def __init__(self, email):
+        self.email = email
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'email': self.email,
+        }

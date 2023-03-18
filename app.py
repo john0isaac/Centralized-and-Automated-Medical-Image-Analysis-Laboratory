@@ -5,10 +5,14 @@ from flask_mail import Mail, Message
 from sqlalchemy import or_
 import numpy as np
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+
+from skimage import measure
+from skimage.transform import resize
 import tensorflow as tf
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
 from keras.preprocessing import image
+from tensorflow import keras
 import matplotlib.pyplot as plt
 
 
@@ -19,6 +23,27 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# define iou or jaccard loss function
+def iou_loss(y_true, y_pred):
+    y_true = tf.reshape(y_true, [-1])
+    y_pred = tf.reshape(y_pred, [-1])
+    y_true = tf.dtypes.cast(y_true, dtype = tf.float32)
+    y_pred = tf.dtypes.cast(y_pred, dtype = tf.float32)
+    intersection = tf.reduce_sum(y_true * y_pred)
+    score = (intersection + 1.) / (tf.reduce_sum(y_true) + tf.reduce_sum(y_pred) - intersection + 1.)
+    return 1 - score
+
+# combine bce loss and iou loss
+def iou_bce_loss(y_true, y_pred):
+    return 0.5 * keras.losses.binary_crossentropy(y_true, y_pred) + 0.5 * iou_loss(y_true, y_pred)
+
+# mean iou as a metric
+def mean_iou(y_true, y_pred):
+    y_pred = tf.round(y_pred)
+    intersect = tf.reduce_sum(y_true * y_pred, axis=[1, 2, 3])
+    union = tf.reduce_sum(y_true, axis=[1, 2, 3]) + tf.reduce_sum(y_pred, axis=[1, 2, 3])
+    smooth = tf.ones(tf.shape(intersect))
+    return tf.reduce_mean((intersect + smooth) / (union - intersect + smooth))
 
 def create_app(test_config=None):
     # Create and configure the app
@@ -133,9 +158,9 @@ def create_app(test_config=None):
     @app.route("/tracker")
     def tracker_page():
         return render_template("pages/tracker.html")
-
-    @app.route("/prediction", methods=["POST", "GET"])
-    def prediction_page():
+    
+    @app.route("/prediction-covid", methods=["POST"])
+    def prediction_covid_page():
         # check if the post request has the file part
         if request.method == 'POST':
             if 'files' not in request.files:
@@ -170,9 +195,101 @@ def create_app(test_config=None):
                 'success': True,
                 'percentage': percentage
                 }), 200
-        return jsonify({
-                'success': False
-                }), 405
+    
+    @app.route("/prediction-lung-cancer", methods=["POST"])
+    def prediction_lung_cancer_page():
+        # check if the post request has the file part
+        if request.method == 'POST':
+            if 'files' not in request.files:
+                flash('No file part')
+            file = request.files['files']
+            # if user does not select file, browser also
+            # submit an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            
+            print("I'm here 1")
+            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
+            print("I'm here 2")
+            
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img = image.load_img(path, target_size=(200, 200))
+            x=image.img_to_array(img)
+            print(x.shape)
+            x /= 255
+            x=np.expand_dims(x, axis=0)
+            print(x.shape)
+            images = np.vstack([x])
+            print(images.shape)
+            classes = model.predict(images, batch_size=10)
+            print("I'm here 3")
+            print(classes)
+            return 0
+            """
+            if classes[0]>0.5:
+                prediction = "Positive"
+            else:
+                prediction = "Negative"
+                percentage = 100 - percentage
+            return jsonify({
+                'prediction': prediction,
+                'success': True,
+                'percentage': percentage
+                }), 200
+            """
+    @app.route("/prediction-pneumonia", methods=["POST"])
+    def prediction_pneumonia_page():
+        # check if the post request has the file part
+        if request.method == 'POST':
+            if 'files' not in request.files:
+                flash('No file part')
+            file = request.files['files']
+            # if user does not select file, browser also
+            # submit an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            print("I'm here 1")
+            model =  tf.keras.models.load_model('.\\cnn_segmentation_pneumonia.h5', custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+            print("I'm here 2")
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
+            img = image.img_to_array(img)
+
+            x=np.expand_dims([img], axis=-1)
+
+            images = np.vstack([x])
+            classes = model.predict(images)
+            print("I'm here 3")
+            print(classes)
+            pred = classes
+            comp = pred[:, :, 0] > 0.5
+            # apply connected components
+            comp = measure.label(comp)
+            # apply bounding boxes
+            predictionString = ''
+            for region in measure.regionprops(comp):
+                # retrieve x, y, height and width
+                y, x, y2, x2 = region.bbox
+                height = y2 - y
+                width = x2 - x
+                # proxy for confidence score
+                conf = np.mean(pred[y:y+height, x:x+width])
+                # add to predictionString
+                predictionString += str(conf) + ' ' + str(x) + ' ' + str(y) + ' ' + str(width) + ' ' + str(height) + ' '
+                print(predictionString)
+            prediction = 0
+            percentage = 0
+            return jsonify({
+                'prediction': prediction,
+                'success': True,
+                'percentage': percentage
+                }), 200
 
     @app.route('/uploads/<filename>')
     def uploaded_file(filename):
