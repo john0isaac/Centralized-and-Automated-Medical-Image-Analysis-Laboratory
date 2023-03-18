@@ -62,7 +62,7 @@ def create_app(test_config=None):
 
     @app.route("/")
     def landing_page():
-        return render_template("pages/index.html")
+        return render_template("pages/index-ar.html")
     
     @app.route("/about")
     def about_page():
