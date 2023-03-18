@@ -26,7 +26,7 @@ source venv/bin/activate
 ```
 >**Note** - In Windows, the `venv` does not have a `bin` directory. Therefore, you'd use the analogous command shown below:
 ```
-source env/Scripts/activate
+source venv/Scripts/activate
 deactivate
 ```
 
