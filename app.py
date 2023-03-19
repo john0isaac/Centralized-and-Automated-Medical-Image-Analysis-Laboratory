@@ -66,7 +66,7 @@ def create_app(test_config=None):
     
     @app.route("/about")
     def about_page():
-        return render_template("pages/about.html")
+        return render_template("pages/about-ar.html")
     
     @app.route("/contact", methods=["GET", "POST"])
     def contact_page():
@@ -92,7 +92,7 @@ def create_app(test_config=None):
                 return jsonify({
                     'success': False 
                 })
-        return render_template("pages/contact.html")
+        return render_template("pages/contact-ar.html")
 
     @app.route("/newsletter-subscribe", methods=["POST"])
     def subscribe_to_newsletter():
@@ -125,39 +125,39 @@ def create_app(test_config=None):
 
     @app.route("/faq")
     def faq_page():
-        return render_template("pages/faq.html")
+        return render_template("pages/faq-ar.html")
     
     @app.route("/prevention")
     def prevention_page():
-        return render_template("pages/prevention.html")
+        return render_template("pages/prevention-ar.html")
 
     @app.route("/search")
     def search_page():
-        return render_template("pages/search.html")
+        return render_template("pages/search-ar.html")
 
     @app.route("/symptom")
     def symptom_page():
-        return render_template("pages/symptom.html")
+        return render_template("pages/symptom-ar.html")
    
     @app.route("/symptom-checker-lung")
     def symptom_checker_lung_page():
-        return render_template("pages/symptom-checker-lung.html")
+        return render_template("pages/symptom-checker-lung-ar.html")
     
     @app.route("/symptom-checker-covid")
     def symptom_checker_covid_page():
-        return render_template("pages/symptom-checker-covid.html")
+        return render_template("pages/symptom-checker-covid-ar.html")
     
     @app.route("/symptom-checker-pneumonia")
     def symptom_checker__pneumonia_page():
-        return render_template("pages/symptom-checker-pneumonia.html")
+        return render_template("pages/symptom-checker-pneumonia-ar.html")
 
     @app.route("/virus-checker")
     def virus_checker_page():
-        return render_template("pages/virus-checker.html")
+        return render_template("pages/virus-checker-ar.html")
 
     @app.route("/tracker")
     def tracker_page():
-        return render_template("pages/tracker.html")
+        return render_template("pages/tracker-ar.html")
     
     @app.route("/prediction-covid", methods=["POST"])
     def prediction_covid_page():
