@@ -1,0 +1,280 @@
+{% extends 'layouts/virius-checker-ar.html' %} {% block title %}Virius Checker - CA-MIL{% endblock %}
+{% block content %}
+        <div class="pagepiling">
+            <div class="pp-scrollable section active">
+                <div class="scroll-wrap">
+                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="container">
+                            <div class="virus_checker_content">
+                                <div class="main_title">
+                                    <h5>Think you might be affected?</h5>
+                                    <h2>Find out what to do for possible coronavirus infection</h2>
+                                </div>
+                                <h4>You should call <span>123</span> if you have:</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="linearicons-heart-pulse"></i><span>Signs of a heart attack:</span>
+                                        pain like a very tight band, heavy weight
+                                        or squeezing in the centre of your chest.</li>
+                                    <li><i class="linearicons-brain"></i><span>Signs of a stroke:</span> face drooping
+                                        on one side, can’t hold both arms
+                                        up, difficulty speaking.</li>
+                                    <li><i class="linearicons-wind"></i><span>Severe difficulty breathing:</span>
+                                        gasping, not being able to get words
+                                        out, choking or lips turning blue.</li>
+                                    <li><i class="linearicons-drop2"></i><span>Heavy bleeding</span> - that won’t stop.
+                                    </li>
+                                    <li><i class="linearicons-power"></i><span>Severe injuries</span> - or deep cuts
+                                        after a serious accident.</li>
+                                    <li><i class="linearicons-ambulance"></i><span>Seizure (fit): </span> someone is
+                                        shaking or jerking because of a fit, or
+                                        is unconscious (can’t be woken up).</li>
+                                </ul>
+                                <div class="checked_button_info">
+                                    <h4>Do you have any of the above?</h4>
+                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                        <input type="radio" name="yes" id="yes" value="yes">
+                                        <label for="yes">Yes</label>
+                                    </div>
+                                    <div class="check_btn moveDown">
+                                        <input type="radio" name="yes" id="no" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pp-scrollable section">
+                <div class="scroll-wrap">
+                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="container">
+                            <div class="virus_checker_content">
+                                <p>We need to know some details about your age, sex and the area you live.</p>
+                                <p>Please give your details or, if you are asking about someone else, the details of the
+                                    person you are asking about.</p>
+                                <p>This will help get a better idea of who is being affected by coronavirus.</p>
+                                <form action="#" class="appoinment_form select_form">
+                                    <div class="form-group">
+                                        <input class="form-control" type="number" id="age" name="age" placeholder>
+                                        <label for="age">What is your age in years?</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="number" id="code" name="code" placeholder>
+                                        <label for="code">What is your postcode?</label>
+                                    </div>
+                                </form>
+                                <div class="checked_button_info">
+                                    <h4>What is your sex?</h4>
+                                    <div class="check_btn">
+                                        <input type="radio" name="gender" id="male" value="male">
+                                        <label for="male">Male</label>
+                                    </div>
+                                    <div class="check_btn">
+                                        <input type="radio" name="gender" id="female" value="female">
+                                        <label for="female">Female</label>
+                                    </div>
+                                    <div class="check_btn">
+                                        <input type="radio" name="gender" id="other" value="other">
+                                        <label for="other">Other/prefer not to answer</label>
+                                    </div>
+                                </div>
+                                <button type="button" class="continue_btn moveDown">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pp-scrollable section">
+                <div class="scroll-wrap">
+                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="container">
+                            <div class="virus_checker_content">
+                                <div class="main_title">
+                                    <h5>Advice on action to take for concern about coronavirus changed</h5>
+                                    <h2>You need to take action if you have either:</h2>
+                                </div>
+                                <div class="row virus_symptom_inner">
+                                    <div class="col-md-6">
+                                        <div class="media virus_symptom">
+                                            <div class="round_img">
+                                                <img src="/static/images/fever.png" alt>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5>A fever <span>(high temperature)</span></h5>
+                                                <p>Even if you do not have a thermometer, you should answer 'yes' if
+                                                    your back or chest feels hot to touch.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="media virus_symptom">
+                                            <div class="round_img">
+                                                <img src="/static/images/cough.png" alt>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5>A new continuous cough</h5>
+                                                <p>Coughing a lot for more than an hour, or 3 or more coughing episodes
+                                                    in 24 hours.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checked_button_info">
+                                    <h4>Do you have either of these symptoms?</h4>
+                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                        <input type="radio" name="yes" id="yes2" value="yes2">
+                                        <label for="yes2">Yes</label>
+                                    </div>
+                                    <div class="check_btn moveDown">
+                                        <input type="radio" name="yes" id="no2" value="no2">
+                                        <label for="no2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pp-scrollable section">
+                <div class="scroll-wrap">
+                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="container">
+                            <div class="virus_checker_content">
+                                <div class="checked_button_info">
+                                    <h4>Are you too breathless to be able to speak more than
+                                        a few words?</h4>
+                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                        <input type="radio" name="yes" id="yes3" value="yes">
+                                        <label for="yes3">Yes</label>
+                                    </div>
+                                    <div class="check_btn moveDown">
+                                        <input type="radio" name="yes" id="no3" value="no">
+                                        <label for="no3">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pp-scrollable section active">
+                <div class="scroll-wrap">
+                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="container">
+                            <div class="virus_checker_content">
+                                <div class="checked_button_info">
+                                    <h4>Do you live with someone who has developed fever or new continuous cough?</h4>
+                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                        <input type="radio" name="yes" id="yes4" value="yes">
+                                        <label for="yes4">Yes</label>
+                                    </div>
+                                    <div class="check_btn" data-toggle="modal" data-target="#recommenddModal">
+                                        <input type="radio" name="yes" id="no4" value="no">
+                                        <label for="no4">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ambulanceModal" id="ambulanceModal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-center">
+                <i class="linearicons-ambulance"></i>
+                <h6>Highly recommended</h6>
+                <h2>Please call 123 immediately and<br> ask for an ambulance.</h2>
+                <button type="button" class="exit_btn" data-dismiss="modal">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade recommenddModal" id="recommenddModal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="scroll_body">
+                    <div class="main_title">
+                        <h5>Recommendation to your details</h5>
+                        <h2>Please call NHS 105 or 15335 and speak to a nurse.</h2>
+                    </div>
+                    <p>Tell them that you have been advised by this tool to call about coronavirus symptoms. The phone
+                        service will be very busy but you must wait until you get through.</p>
+                    <h6>You also need to isolate yourself and stay indoors for at least 7 days.</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="linearicons-arrow-right"></i><span>Everyone you live with needs</span> to isolate
+                            themselves at home for at least <span>14 days.</span></li>
+                        <li><i class="linearicons-arrow-right"></i>If <span>they develop fever or cough</span> during
+                            that
+                            time they should complete this form.</li>
+                        <li><i class="linearicons-arrow-right"></i>Even though you are in the house together, you should
+                            <span>try
+                                and stay away from each
+                                other as much as you can.</span>
+                        </li>
+                        <li><i class="linearicons-arrow-right"></i>If you live with someone aged 70 or older, or who has
+                            a
+                            long-term health condition
+                            or is pregnant, try and find somewhere else for them to stay for 14 days (where they
+                            can isolate themselves).</li>
+                    </ul>
+                    <p><span>Find out more about how to self-isolate.</span> Please read and follow this guidance
+                        carefully
+                        to protect others. To protect yourself and others, do not go to a GP, pharmacy or hospital.</p>
+                    <h6>If you’re away from home:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="linearicons-arrow-right"></i>Go straight home by the most direct route</li>
+                        <li><i class="linearicons-arrow-right"></i>Stay at least 2 metres away from people if possible.
+                        </li>
+                        <li><i class="linearicons-arrow-right"></i>Avoid public transport if you can.</li>
+                    </ul>
+                </div>
+                <button type="button" class="exit_btn" data-dismiss="modal">Exit</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade search_modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="/static/images/icon/close-white.png" alt>
+        </button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type here..."
+                            aria-label="Recipient's username">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"><i
+                                    class="linearicons-magnifier"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block script %}
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+<!-- <script src="/static/vendors/corona-live/dashboard.js"></script> -->
+    <script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
+    <script src="/static/vendors/slick/slick.min.js"></script>
+    <script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+    {% endblock %}

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- meta -->
+    <meta name="description" content="Centeralized and Automated Medical Imaging Laboratory">
+    <meta name="author" content="Omar Khalil, John Aziz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:site_name" content="CA-MIL">
+    <meta property="og:locale" content="en_IE" />
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    {% block meta %}
+    {% endblock %}
+    <!-- /meta -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/ico/favicon-16x16.png">
+    <link rel="manifest" href="/static/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/static/css/upload.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/vendors/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/static/vendors/linearicons/css/linearicons.css">
+    <link rel="stylesheet" href="/static/vendors/slick/slick.css">
+    <link rel="stylesheet" href="/static/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+</head>
+
+<body>
+    <div class="body_wrapper">
+  
+      <div class="preloader">
+        <div class="three-bounce">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+      </div>
+  
+      <div class="mobile_canvus_menu">
+        <div class="close_btn">
+          <img src="/static/images/icon/close-dark.png" alt>
+        </div>
+        <div class="menu_part_lux">
+          <ul class="menu_list wd_scroll">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li>
+                      <a href="/symptom">How to Use
+                        <i class="linearicons-chevron-down"></i>
+                      </a>
+                      <ul class="list">
+                        <li><a href="/symptom-checker-lung">For Lung Cancer</a></li>
+                        <li><a href="/symptom-checker-pneumonia">For Pneumonia</a></li>
+                        <li><a href="/symptom-checker-covid">For Covid 19</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="menu_btm">
+          <a class="green_btn" href="/symptom"><i class="linearicons-pulse"></i>Checker</a>
+        </div>
+      </div>
+  
+  
+      <div class="body_capture"></div>
+      <section class="sidebar_widget scroll_body">
+        <div class="info_sidebar_inner">
+          <div class="close_btn">
+            <img src="/static/images/icon/close.png" alt>
+          </div>
+          <ul class="nav info_social">
+            <li>
+              <a ><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a ><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a ><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a ><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+          <div class="info_title">
+            <h2>Get in touch</h2>
+            <p>If you have any question before we start, please fill below the contact form.</p>
+          </div>
+          <form id="get-in-touch" class="appoinment_form js-form">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input class="form-control" type="text" id="a_name" name="a_name" placeholder required>
+                  <label><i class="linearicons-user"></i>Your Name</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input class="form-control" type="text" id="a_email" name="a_email" placeholder required>
+                  <label><i class="linearicons-envelope-open"></i>Your Email
+                    Address</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input class="form-control" type="text" id="a_number" name="a_number" placeholder required>
+                  <label><i class="linearicons-telephone"></i>Your Phone
+                    Number</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <textarea name="a_message" id="a_message" cols="30" rows="10" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group checkbox_field">
+                  <div class="checkbox">
+                    <input type="checkbox" value="None" id="squared2" name="check">
+                    <label class="l_text" for="squared2">I accept the <span>Privacy Policy</span></label>
+                  </div>
+                  <button type="submit" class="green_btn" name="appoinment" id="appoinment" value="appoinment"
+                    data-value="appoinment">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="success-in-touch" class="success-message text-white font-weight-bold">
+              <i class="fa fa-check text-primary"></i> Thank you!. Your message
+              is successfully sent...
+            </div>
+            <div id="fail-in-touch" class="error-message text-white font-weight-bold">We're sorry, but something went wrong</div>
+          </form>
+          <div class="info_footer">
+            <p>© Copyright
+              <script>
+                document.write(new Date().getFullYear());
+              </script> Epidemic Organisation Ltd.
+            </p>
+          </div>
+        </div>
+      </section>
+  
+  
+      <header class="header_area white_header">
+        <ul class="nav menu_social flex-column">
+          <li>
+            <a ><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a ><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a ><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+        <div class="main_menu">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href>
+                <img src="/static/images/logo-2.png" srcset="/static/images/logo-2-2x.png 2x" alt>
+                <img src="/static/images/logo.png" srcset="/static/images/logo-2x.png 2x" alt>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li class="dropdown submenu">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="/symptom" role="button"
+                      aria-haspopup="true" aria-expanded="false">How to Use</a>
+                    <i class="linearicons-chevron-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                      <li><a href="/symptom-checker-lung">For Lung Cancer</a></li>
+                      <li><a href="/symptom-checker-pneumonia">For Pneumonia</a></li>
+                      <li><a href="/symptom-checker-covid">For Covid 19</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="checker_btn">
+                    <a href="/symptom"><i class="linearicons-pulse"></i>Checker</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="right_burger">
+            <ul class="nav">
+              <!--
+              <li>
+                <div class="search_btn" data-toggle="modal" data-target="#exampleModal">
+                  <img src="/static/images/icon/search-white.png" alt>
+                  <img src="/static/images/icon/search.png" alt>
+                </div>
+              </li>
+              -->
+              <li>
+                <div class="menu_btn">
+                  <img src="/static/images/icon/burger-white.png" alt>
+                  <img src="/static/images/icon/burger.png" alt>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+        {% block content %}{% endblock %}
+
+
+        <footer class="footer_area">
+            <div class="footer_widgets_area pad_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <aside class="f_widget contact_widget">
+                                <div class="f_title">
+                                    <h3>Contacts</h3>
+                                </div>
+                                <div class="ct_wd_text">
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <i class="linearicons-telephone"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5>emergency call</h5>
+                                            <a href="tel:15335">
+                                                <h4>15335</h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <i class="linearicons-map-marker"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <p>
+                                                3 Magles El Shaab Street,<br>
+                                                Cairo, Egypt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <i class="linearicons-envelope-open"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <a
+                                                href="/cdn-cgi/l/email-protection#23514c40485a4147121a1a1663444e424a4f0d404c4e">
+                                                <h6>Email: <span><span class="__cf_email__">mohp.gov.egy@gmail.com</span></span>
+                                                </h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                        <!-- 
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <aside class="f_widget list_widget">
+                                <div class="f_title">
+                                    <h3>Prevention & Protection</h3>
+                                </div>
+                                <ul class="nav flex-column">
+                                    <li>
+                                        <a ><i class="linearicons-radio-button"></i>Typical
+                                            Symptoms</a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="linearicons-radio-button"></i>How to
+                                            Protect</a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="linearicons-radio-button"></i>How are
+                                            spreading</a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="linearicons-radio-button"></i>Meet our
+                                            Doctors</a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="linearicons-radio-button"></i>About
+                                            CA-MIL</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        -->
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <aside class="f_widget about_widget">
+                                <div class="f_title">
+                                    <h3>About</h3>
+                                </div>
+                                <p>
+                                  Our goal is to position Radiomics as the next generation imaging CRO. 
+                                  For this, Radiomics provides a full package of services. 
+                                  so our medical image Laboratory will help ill people to discover the illness early.
+                                </p>
+                                <ul class="nav">
+                                    <li>
+                                        <a ><i class="fab fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a ><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="container">
+                    <img src="/static/images/f-logo.png" alt>
+                    <p>© Copyright
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> CA-MIL Organisation Ltd.
+                    </p>
+                    <ul class="nav">
+                        <li><a >Term of Use</a></li>
+                        <li><a >Privacy Policy</a></li>
+                        <li><a >Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade search_modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="/static/images/icon/close-white.png" alt>
+        </button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type here..."
+                            aria-label="Recipient's username" aria-describedby="button-addon3">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon3"><i
+                                    class="linearicons-magnifier"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block script %}{% endblock %}
+    <script>
+      document.getElementById('get-in-touch').onsubmit = function(e){  
+      e.preventDefault();
+      var form = document.getElementById('get-in-touch');
+      fetch('/contact', {
+          method: 'POST', 
+          body: JSON.stringify({ 
+          'name': form['a_name'].value,
+          'email': form['a_email'].value,
+          'phone': form['a_number'].value,
+          'message': form['a_message'].value
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+      }).then(function(response){
+          return response.json();
+      }).then(function(jsonResponse){
+          if(jsonResponse['success'] == true){
+          const success = document.getElementById('success-in-touch');
+          success.style.display = "block";
+          form.reset();
+          }
+      }).catch(function(error){
+          const fail = document.getElementById('fail-in-touch');         
+          fail.style.display = "block";
+      });
+  }
+  </script>
+</body>
+
+</html>
