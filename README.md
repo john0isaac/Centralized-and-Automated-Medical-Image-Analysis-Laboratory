@@ -8,6 +8,7 @@ cd Centralized-and-Automated-Medical-Image-Analysis-Laboratory
 ```
 
 2. **Before and After editing your code, Use the commands below:**
+
 before editing anything pull new changes from GitHub.
 ```
 git pull
