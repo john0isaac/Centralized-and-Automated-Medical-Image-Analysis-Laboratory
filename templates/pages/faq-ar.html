@@ -1,12 +1,12 @@
 {% extends 'layouts/dark-ar.html' %} {% block title %}FAQ - CA-MIL{% endblock %}
 {% block content %}
-    <section class="faq_breadcrumb_area">
-      <img class="overlay_bg" src="/static/images/about/worldmap2.png" alt>
-      <div class="container">
-        <div class="breadcrumb_content text-center">
-          <h6>Frequently Asked Questions</h6>
-          <h2>Find answers about Coronavirus</h2>
-          <!--
+<section class="faq_breadcrumb_area">
+  <img class="overlay_bg" src="/static/images/about/worldmap2.png" alt>
+  <div class="container">
+    <div class="breadcrumb_content text-center">
+      <h6>أسئلة مكررة</h6>
+      <h2>اعثر على إجابات حول فيروس كوفيد</h2>
+      <!--
           <form action="#" class="faq_search">
             <div class="control-with-icon">
               <input type="text" class="form-control" placeholder="Start typing your question..." required>
@@ -14,1508 +14,1173 @@
             </div>
           </form>
           -->
+    </div>
+  </div>
+</section>
+
+
+<section class="coronavirus_question_area">
+  <div class="container">
+    <div class="main_title text-center">
+      <h2>أهم الأسئلة</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-first-aid"></i>
+          </div>
+          ما هي الاعراض؟
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-eye-dropper"></i>
+          </div>
+          هل يجب علي إجراء الاختبار؟
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-earth"></i>
+          </div>
+          كيف ينتشر؟
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-bag-dollar"></i>
+          </div>
+          هل يمكنني الحصول على مساعدة مالية؟
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-chart-growth"></i>
+          </div>
+          كيف يمكنني تقليل المخاطر الخاصة بي؟
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+        <a class="corona_question">
+          <div class="icon">
+            <i class="linearicons-plane"></i>
+          </div>
+          هل يمكننى السفر؟
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="common_question_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="common_question_item">
+          <h3>كيف تحمي نفسك؟</h3>
+          <ul class="list-unstyled question_list">
+            <li><a>هل أنا فى خطر ؟ </a></li>
+            <li>
+              <a>لماذا تحتاج إلى ارتداء أغطية من القماش للوجه؟</a>
+            </li>
+            <li><a>كيف يمكنني إدارة القلق والتوتر؟</a></li>
+          </ul>
+          <a class="text_btn" href="/about">عرض جميع الأسئلة حول
+            <i class="linearicons-arrow-right"></i></a>
         </div>
       </div>
-    </section>
-
-
-    <section class="coronavirus_question_area">
-      <div class="container">
-        <div class="main_title text-center">
-          <h2>Top questions</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-first-aid"></i>
-              </div>
-              What are the symptoms?
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-eye-dropper"></i>
-              </div>
-              Should I get tested?
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-earth"></i>
-              </div>
-              How does it spread?
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-bag-dollar"></i>
-              </div>
-              Can I get financial help?
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-chart-growth"></i>
-              </div>
-              How do I reduce my risk?
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-6">
-            <a  class="corona_question">
-              <div class="icon">
-                <i class="linearicons-plane"></i>
-              </div>
-              Can I travel?
-            </a>
-          </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="common_question_item">
+          <h3>ماذا تفعل إذا شعرت بالمرض؟</h3>
+          <ul class="list-unstyled question_list">
+            <li><a>ما هى أعراض كوفيد؟</a></li>
+            <li><a>هل يجب علي إجراء الاختبار؟</a></li>
+            <li>
+              <a>ماذا أفعل إذا مرض شخص ما في منزلي؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض جميع الأسئلة حول
+            <i class="linearicons-arrow-right"></i></a>
         </div>
       </div>
-    </section>
-    <section class="common_question_area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="common_question_item">
-              <h3>How to protect yourself?</h3>
-              <ul class="list-unstyled question_list">
-                <li><a >Am I at risk?</a></li>
-                <li>
-                  <a >Why do you need to wear cloth face coverings?</a>
-                </li>
-                <li><a >How can I manage anxiety and stress?</a></li>
-              </ul>
-              <a class="text_btn" href="/about">View all questions about
-                <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="common_question_item">
-              <h3>What to do if you feel sick?</h3>
-              <ul class="list-unstyled question_list">
-                <li><a >What are the symptoms of COVID-19?</a></li>
-                <li><a >Should I get tested?</a></li>
-                <li>
-                  <a >What should I do if someone in my house gets sick?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all questions about
-                <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="more_question_area">
+  <div class="container">
+    <div class="row more_question_inner">
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>الأعراض والاختبار</h3>
+          <ul class="list-unstyled question_list">
+            <li><a>هل يجب أن أخضع لاختبار كوفيد؟</a></li>
+            <li>
+              <a>ما هي الأعراض والمضاعفات التي يمكن أن يسببها مرض كوفيد ؟</a>
+            </li>
+            <li>
+              <a>أين يمكنني إجراء اختبار كوفيد؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
         </div>
       </div>
-    </section>
-
-
-    <section class="more_question_area">
-      <div class="container">
-        <div class="row more_question_inner">
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>Symptoms and testing</h3>
-              <ul class="list-unstyled question_list">
-                <li><a >Should I be tested for COVID-19?</a></li>
-                <li>
-                  <a >What are the symptoms and complications that COVID-19 can
-                    cause?</a>
-                </li>
-                <li>
-                  <a >Where can I get tested for COVID-19?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>Traveling</h3>
-              <ul class="list-unstyled question_list">
-                <li>
-                  <a >Should I cancel my international trip?</a>
-                </li>
-                <li>
-                  <a >What happens if there is a sick passenger on my
-                    flight?</a>
-                </li>
-                <li>
-                  <a >What if I recently traveled and get sick?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>How it spreads</h3>
-              <ul class="list-unstyled question_list">
-                <li><a >How does the virus spread?</a></li>
-                <li>
-                  <a >What is community spread?</a>
-                </li>
-                <li>
-                  <a >What is the source of the virus?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>Keeping your home safe</h3>
-              <ul class="list-unstyled question_list">
-                <li>
-                  <a >What steps can my family take to reduce our risk of
-                    getting COVID-19?</a>
-                </li>
-                <li>
-                  <a >How can my family and I prepare for COVID-19?</a>
-                </li>
-                <li>
-                  <a >Should I use soap and water or a hand sanitizer to
-                    protect against COVID-19?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>Financial help for workers and families</h3>
-              <ul class="list-unstyled question_list">
-                <li>
-                  <a >Who is eligible for the economic impact payment?</a>
-                </li>
-                <li>
-                  <a >Is the government delaying Tax Day?</a>
-                </li>
-                <li>
-                  <a >How can I file the tax return needed to receive my
-                    economic impact payment?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="more_question_item">
-              <h3>Parents and children</h3>
-              <ul class="list-unstyled question_list">
-                <li>
-                  <a >Are children more at-risk?</a>
-                </li>
-                <li>
-                  <a >How should parents talk to children about COVID-19?</a>
-                </li>
-                <li>
-                  <a >Are the symptoms of COVID-19 different in children than
-                    in adults?</a>
-                </li>
-              </ul>
-              <a class="text_btn" href="/about">View all <i class="linearicons-arrow-right"></i></a>
-            </div>
-          </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>السفر</h3>
+          <ul class="list-unstyled question_list">
+            <li>
+              <a>هل يجب أن ألغي رحلتي الدولية؟</a>
+            </li>
+            <li>
+              <a>ماذا يحدث إذا كان هناك راكب مريض على متن رحلتي؟</a>
+            </li>
+            <li>
+              <a>ماذا لو سافرت مؤخرًا ومرضت؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
         </div>
-        <div class="border_bottom"></div>
       </div>
-    </section>
-
-
-    <section class="faq_area">
-      <div class="container">
-        <div class="main_title">
-          <h5>Have questions? Find answers!</h5>
-          <h2>Frequently Asked Questions</h2>
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>كيف ينتشر</h3>
+          <ul class="list-unstyled question_list">
+            <li><a>كيف ينتشر الفيروس؟</a></li>
+            <li>
+              <a>ما هو انتشار المجتمع؟</a>
+            </li>
+            <li>
+              <a>ما هو مصدر الفيروس؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
         </div>
-        <div class="row answer_inner">
-          <div class="col-lg-4">
-            <div class="question_list">
-              <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
-                      Pandemic
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="home1-tab" data-toggle="tab" href="#home1" role="tab"
-                            aria-controls="home1" aria-selected="true">What are coronaviruses?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      About COVID-19
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="profile2-tab" data-toggle="tab" href="#home2" role="tab"
-                            aria-controls="home2" aria-selected="false">What is the COVID-19 virus?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Protecting against COVID-19
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab3" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="home3-tab" data-toggle="tab" href="#home3" role="tab"
-                            aria-controls="home3" aria-selected="true">How to prevent Coronavirus?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingfour">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                      Work and travel arrangements
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab4" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="home4-tab" data-toggle="tab" href="#home4" role="tab"
-                            aria-controls="home4" aria-selected="true">What are travel guidelines during COVID-19?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingfive">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                      About university and school
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab5" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="home5-tab" data-toggle="tab" href="#home5" role="tab"
-                            aria-controls="home5" aria-selected="true">What are Covid-19 protocols for university and schools?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingsix">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                      Home isolation
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab6" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="home6-tab" data-toggle="tab" href="#home6" role="tab"
-                            aria-controls="home6" aria-selected="true">Home isolation protocols to care for someone at home</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingseven">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                      Social distancing
-                      <i class="linearicons-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div id="collapseseven" class="collapse" aria-labelledby="headingseven"
-                    data-parent="#accordionExample">
-                    <div class="card-body">
-                      <ul class="nav nav-tabs" id="myTab7" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" id="home7-tab" data-toggle="tab" href="#home7" role="tab"
-                            aria-controls="home7" aria-selected="true">How to Protect Yourself & Others?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>الحفاظ على منزلك آمنًا</h3>
+          <ul class="list-unstyled question_list">
+            <li>
+              <a>ما الخطوات التي يمكن أن تتخذها عائلتي لتقليل مخاطر الإصابة بكوفيد؟</a>
+            </li>
+            <li>
+              <a>كيف يمكنني أنا وعائلتي الاستعداد لـكوفيد؟</a>
+            </li>
+            <li>
+              <a>هل يجب أن أستخدم الصابون والماء أو معقم اليدين للحماية من كوفيد؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>المساعدة المالية للعمال والعائلات</h3>
+          <ul class="list-unstyled question_list">
+            <li>
+              <a>من هو المؤهل لدفع الأثر الاقتصادي؟</a>
+            </li>
+            <li>
+              <a>هل تؤجل الحكومة يوم الضريبة؟</a>
+            </li>
+            <li>
+              <a>كيف يمكنني تقديم الإقرار الضريبي اللازم لاستلام ملف
+                دفع الأثر الاقتصادي؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="more_question_item">
+          <h3>الآباء والأطفال</h3>
+          <ul class="list-unstyled question_list">
+            <li>
+              <a>هل الأطفال أكثر عرضة للخطر؟</a>
+            </li>
+            <li>
+              <a>كيف يجب على الآباء التحدث مع الأطفال حول كوفيد؟</a>
+            </li>
+            <li>
+              <a>هل تختلف أعراض كوفيد لدى الأطفال عنها لدى البالغين؟</a>
+            </li>
+          </ul>
+          <a class="text_btn" href="/about">عرض الكل <i class="linearicons-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border_bottom"></div>
+  </div>
+</section>
+
+
+<section class="faq_area">
+  <div class="container">
+    <div class="main_title">
+      <h5>هل لديك أسئلة؟ ابحث عن اجابات</h5>
+      <h2>أسئلة مكررة</h2>
+    </div>
+    <div class="row answer_inner">
+      <div class="col-lg-4">
+        <div class="question_list">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  الوباء
+                  <i class="linearicons-chevron-down"></i>
+                </button>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home1-tab" data-toggle="tab" href="#home1" role="tab"
+                        aria-controls="home1" aria-selected="true">ماهو كوفيد؟</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="tab-content answer_details" id="myTabContent">
-              <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home1-tab">
-                <h4>What are coronaviruses?</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  عن كوفيد
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <h4>What is the COVID-19 virus?</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile2-tab" data-toggle="tab" href="#home2" role="tab"
+                        aria-controls="home2" aria-selected="false">ما هو فيروس كوفيد؟</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <h4>What is the difference between COVID-19 and the flu?</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+                  الحماية من كوفيد
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">
-                <h4>How is the virus spread?</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab3" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home3-tab" data-toggle="tab" href="#home3" role="tab"
+                        aria-controls="home3" aria-selected="true">كيف نمنع فيروس كورونا؟</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
-                <h4>What are the symptoms?</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingfour">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour"
+                  aria-expanded="false" aria-controls="collapsefour">
+                  ترتيبات العمل والسفر
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="home2" role="tabpanel" aria-labelledby="home2-tab">
-                <h4>What is it?</h4>
-                <p>
-                  Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
-                </p>
-                <p>
-                  Most people who fall sick with COVID-19 will experience mild to moderate symptoms and
-                  recover without special treatment. However, some will become seriously ill and require medical attention.
-                </p>
+              <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab4" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home4-tab" data-toggle="tab" href="#home4" role="tab"
+                        aria-controls="home4" aria-selected="true">ما هي إرشادات السفر أثناء كوفيد؟</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile2-tab">
-                <h4>What is the COVID-19 virus? 2</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingfive">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefive"
+                  aria-expanded="false" aria-controls="collapsefive">
+                  عن الجامعة والمدرسة
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+              <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab5" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home5-tab" data-toggle="tab" href="#home5" role="tab"
+                        aria-controls="home5" aria-selected="true">ما هي بروتوكولات كوفيد للجامعات والمدارس؟</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane fade" id="four2" role="tabpanel" aria-labelledby="four2-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingsix">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsesix"
+                  aria-expanded="false" aria-controls="collapsesix">
+                  العزل المنزلي
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="five2" role="tabpanel" aria-labelledby="five2-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+              <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab6" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home6-tab" data-toggle="tab" href="#home6" role="tab"
+                        aria-controls="home6" aria-selected="true">بروتوكولات العزل المنزلي لرعاية شخص ما في
+                        بيت</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="tab-pane fade" id="home3" role="tabpanel" aria-labelledby="home3-tab">
-                <h4>Important Steps to prevent Coronavirus</h4>
-                <p>
-                  <strong>Stay at home</strong><br>
-                  Stay at home if you perceive the symptoms and consult your doctor on phone.
-                </p>
-                <p>
-                  <strong>Wash your hands often</strong><br>
-                  Clean your hands with alcohol-based rub or wash them with soap for at least 20 seconds.
-                </p>
-                <p>
-                  <strong>Keep social distance</strong><br>
-                  Keep at least 2 m distance between yourself & anyone if you go among people.
-                </p>
-                <p>
-                  <strong>Wear Facemask</strong><br>
-                  When you are around other people and before you enter a healthcare provider’s.
-                </p>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingseven">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseseven"
+                  aria-expanded="false" aria-controls="collapseseven">
+                  التباعد الاجتماعي
+                  <i class="linearicons-chevron-down"></i>
+                </button>
               </div>
-              <div class="tab-pane fade" id="profile3" role="tabpanel" aria-labelledby="profile3-tab">
-                <h4>What is the COVID-19 virus? 2</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact3-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="four3" role="tabpanel" aria-labelledby="four3-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="five3" role="tabpanel" aria-labelledby="five3-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="home4" role="tabpanel" aria-labelledby="home4-tab">
-                <h4>Travel Guidelines</h4>
-                <p>
-                  <strong>Egypt</strong>
-                </p>
-                <p>
-                  1- For all travelers holding a COVID-19 vaccination certificate
-                  issued without a QR code in the country that the passenger
-                  is coming from, the certificate will be accepted if it is
-                  approved and authorized by the Egyptian embassy based in this country.
-                </p>
-                <p>
-                  2- For passengers who are fully vaccinated in Egypt, the electronic
-                  vaccination certificate issued by The Egyptian Ministry of Health
-                  and holding its logo is the only acceptable vaccination certificate.
-                </p>
-                <p>
-                  3- All travelers of all nationalities holding a COVID-19 vaccination
-                  certificate arriving from all destinations worldwide will be exempted
-                  from providing PCR test certificates. Exception applies.
-                </p>
-                <p>
-                  4- All travelers of all nationalities holding a COVID-19 vaccination certificate
-                  arriving from or transiting via India, Bangladesh, Pakistan, Bhutan, Myanmar,
-                  Nepal, Sri Lanka, Vietnam, or Latin America within fourteen days before arriving
-                  in Egypt will be required to do an ID now COVID-19 test upon arrival at the airport.
-                  If the ID now COVID-19 test is positive, a PCR test will follow. If the result is positive,
-                  the traveler will be quarantined at an authorized governmental hospital with further procedures.
-                </p>
-                <p>
-                  5- All travelers of all nationalities arriving in Egypt with no COVID-19 vaccination certificate
-                  must have a negative PCR test stamped with the authorized laboratory’s stamp or with a QR Code
-                  indicating the hour and the date of the sample. A hard copy of the PCR test is required and not electronic.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="profile4" role="tabpanel" aria-labelledby="profile4-tab">
-                <h4>What is the COVID-19 virus? 2</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="contact4" role="tabpanel" aria-labelledby="contact4-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="four4" role="tabpanel" aria-labelledby="four4-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="five4" role="tabpanel" aria-labelledby="five4-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="home5" role="tabpanel" aria-labelledby="home5-tab">
-                <h4>Protocols for university and schools</h4>
-                <h6>Key Takeaways</h6>
-                <p>
-                  1- Students benefit from in-person learning, and safely returning to in-person instruction continues to be a priority.
-                </p>
-                <p>
-                  2- Vaccination is the leading public health prevention strategy to end the COVID-19 pandemic. Promoting vaccination can help schools safely return to in-person learning as well as extracurricular activities and sports.
-                </p>
-                <p>
-                  3- Students, teachers, and staff should stay home when they have signs of any infectious illness and be referred to their healthcare provider for testing and care.
-                </p>
-                <p>
-                  4- This guidance emphasizes implementing layered prevention strategies to protect students, teachers, staff, visitors, and other members of their households and support in-person learning.
-                </p>
-                <p>
-                  5- Localities should monitor community transmission, vaccination coverage, screening testing, and occurrence of outbreaks to guide decisions on the level of layered prevention strategies (e.g., physical distancing, screening testing).
-                </p>
-              </div>
-              <div class="tab-pane fade" id="profile5" role="tabpanel" aria-labelledby="profile5-tab">
-                <h4>What is the COVID-19 virus? 2</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="contact5" role="tabpanel" aria-labelledby="contact5-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="four5" role="tabpanel" aria-labelledby="four5-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="five5" role="tabpanel" aria-labelledby="five5-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="home6" role="tabpanel" aria-labelledby="home6-tab">
-                <h4>Home to care for covid patient at home?</h4>
-                <p>
-                  If possible, have the person who is sick use a separate bedroom and bathroom.
-                  If possible, have the person who is sick stay in their own “sick room” or area
-                  and away from others. Try to stay at least 6 feet away from the sick person.
-                  Shared space: If you have to share space, make sure the room has good air flow.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="profile6" role="tabpanel" aria-labelledby="profile6-tab">
-                <h4>What is the COVID-19 virus? 2</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="contact6" role="tabpanel" aria-labelledby="contact6-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="four6" role="tabpanel" aria-labelledby="four6-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="five6" role="tabpanel" aria-labelledby="five6-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="home7" role="tabpanel" aria-labelledby="home7-tab">
-                <h4>How to Protect Yourself & Others?</h4>
-                <p>
-                  1- Get Vaccinated and stay up to date on your COVID-19 vaccines.
-                </p>
-                <p>
-                  2- Wear a mask.
-                </p>
-                <p>
-                  3- Stay 6 feet away from others.
-                </p>
-                <p>
-                  4- Avoid poorly ventilated spaces and crowds.
-                </p>
-                <p>
-                  5- Test to prevent spread to others.
-                </p>
-                <p>
-                  6- Wash your hands often.
-                </p>
-                <p>
-                  7- Cover coughs and sneezes.
-                </p>
-                <p>
-                  8- Clean and disinfect.
-                </p>
-                <p>
-                  9- Monitor your health daily.
-                </p>
-                <p>
-                  10- Follow recommendations for quarantine.
-                </p>
-                <p>
-                  11- Follow recommendations for isolation.
-                </p>
-                <p>
-                  12- Take precautions when you travel.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="contact7" role="tabpanel" aria-labelledby="contact7-tab">
-                <h4>
-                  What is the difference between COVID-19 and the flu? 3
-                </h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="four7" role="tabpanel" aria-labelledby="four7-tab">
-                <h4>How is the virus spread? 4</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
-              </div>
-              <div class="tab-pane fade" id="five7" role="tabpanel" aria-labelledby="five7-tab">
-                <h4>What are the symptoms? 5</h4>
-                <p>
-                  The first symptoms of COVID-19 and influenza (flu)
-                  infections are often very similar. They both cause fever and
-                  similar respiratory symptoms, which can then range from mild
-                  through to severe disease, and sometimes can be fatal.
-                </p>
-                <p>
-                  Both viruses are also transmitted in the same way, by
-                  coughing or sneezing, or by contact with hands, surfaces or
-                  objects contaminated with the virus. As a result, the same
-                  public health measures, such as hand hygiene (hand washing),
-                  good respiratory etiquette (coughing into your elbow or into
-                  a tissue and immediately disposing of the tissue) and good
-                  household cleaning are important actions to prevent both
-                  infections.
-                </p>
-                <p>
-                  The speed of transmission is an important difference between
-                  the two viruses. Influenza typically has a shorter
-                  incubation period (the time from infection to appearance of
-                  symptoms) than COVID-19. This means that influenza can
-                  spread faster than COVID-19.
-                </p>
-                <p>
-                  While the range of symptoms for the two viruses is similar,
-                  the fraction with severe disease appears to be higher for
-                  COVID-19. While most people have mild symptoms,
-                  approximately 15% of people have severe infections and 5%
-                  require intensive care in a hospital ICU. The proportions of
-                  severe and critical COVID-19 infections are higher than for
-                  influenza infections.
-                </p>
+              <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab7" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home7-tab" data-toggle="tab" href="#home7" role="tab"
+                        aria-controls="home7" aria-selected="true">كيف تحمى نفسك والاخرين؟</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    {% endblock %}
-  {% block script %}
-  <script src="/static/js/jquery-3.4.1.min.js"></script>
-  <script src="/static/js/popper.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
+      <div class="col-lg-8">
+        <div class="tab-content answer_details" id="myTabContent">
+          <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home1-tab">
+            <h4>ما هو كوفيد؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي
+              يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h4>ما هو فيروس كورونا؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <h4>ما الفرق بين كوفيد والانفلونزا؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">
+            <h4>كيف ينتشر الفيروس؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+            <h4>ما هى الاعراض؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home2" role="tabpanel" aria-labelledby="home2-tab">
+            <h4>ما هذا؟</h4>
+            <p>
+              (SARS-CoV-2) مرض فيروس كوفيد هو مرض معد يسببه فيروس .
+            </p>
+            <p>
+              يعاني معظم الأشخاص الذين يصابون بمرض كوفيد من أعراض خفيفة إلى متوسطة ويتعافون دون علاج خاص. ومع ذلك ،
+              سيصاب البعض بمرض خطير ويحتاجون إلى رعاية طبية.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile2-tab">
+            <h4>2 ما هو فيروس كوفيد؟</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four2" role="tabpanel" aria-labelledby="four2-tab">
+            <h4>كيف ينتشر الفيروس؟ 4</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five2" role="tabpanel" aria-labelledby="five2-tab">
+            <h4>ما هى الاعراض؟ 5</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home3" role="tabpanel" aria-labelledby="home3-tab">
+            <h4>خطوات مهمة للوقاية من فيروس كورونا</h4>
+            <p>
+              <strong>ابق فى المنزل </strong><br>
+              ابق في المنزل إذا لاحظت الأعراض واستشر طبيبك عبر الهاتف.
+            </p>
+            <p>
+              <strong>اغسل يديك كثيرًا</strong><br>
+              نظف يديك بمطهر كحولي أو اغسلهما بالصابون لمدة عشرين ثانية على الأقل.
+            </p>
+            <p>
+              <strong>حافظ على التباعد الاجتماعي </strong><br>
+              احتفظ بمسافة لا تقل عن (2 متر) بينك أو بين أي شخص إذا ذهبت بين الناس.
+            </p>
+            <p>
+              <strong>ارتدى كمامة </strong><br>
+              عندما تكون بالقرب من أشخاص آخرين
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile3" role="tabpanel" aria-labelledby="profile3-tab">
+            <h4>ما هو فيروس كوفيد؟ 2</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact3-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four3" role="tabpanel" aria-labelledby="four3-tab">
+            <h4>كيف ينتشر المرض؟ 4 </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five3" role="tabpanel" aria-labelledby="five3-tab">
+            <h4>ما هى الأعراض؟ 5 </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home4" role="tabpanel" aria-labelledby="home4-tab">
+            <h4>إرشادات السفر</h4>
+            <p>
+              <strong>مصر</strong>
+            </p>
+            <p>
+              لجميع المسافرين الذين يحملون شهادة تطعيم ضد فيروس كوفيد المستجد صادرة دون رمز الاستجابة السريعة في البلد-
+              الذي يأتي منه المسافر ، سيتم قبول الشهادة إذا تم اعتمادها وترخيصها من قبل السفارة المصرية الموجودة في هذه
+              الدولة.
+            </p>
+            <p>
+              بالنسبة للمسافرين الذين تم تطعيمهم بالكامل في مصر ، فإن شهادة التطعيم الإلكترونية الصادرة عن وزارة الصحة
+              المصرية والتي تحمل شعارها هي شهادة التطعيم الوحيدة المقبولة.
+            </p>
+            <p>
+              يُعفى جميع المسافرين من جميع الجنسيات الحاملين لشهادة تطعيم كوفيد القادمين من جميع أنحاء العالم من
+              تقديم شهادات الأختبار .ينطبق الاستثناء
+
+            </p>
+            <p>
+              سيُطلب من جميع المسافرين من جميع الجنسيات الحاملين لشهادة تطعيم كوفيد القادمين من الهند أو بنجلاديش أو
+              باكستان أو بوتان أو ميانمار أو نيبال أو سريلانكا أو فيتنام أو أمريكا اللاتينية في غضون أربعة عشر يومًا قبل
+              وصولهم إلى مصر ، القيام بذلك. حدد الآن اختبار كوفيد عند الوصول إلى المطار. إذا كان اختبار المعرف الآن
+              كوفيد إيجابيًا ، فسيتبع ذلك الأختبار.
+              إذا كانت النتيجة إيجابية ، فسيتم وضع المسافر في الحجر الصحي في
+              مستشفى حكومي مرخص مع مزيد من الإجراءات.
+            </p>
+            <p>
+              يجب أن يكون لدى جميع المسافرين من جميع الجنسيات الذين يصلون إلى مصر بدون شهادة تطعيم ضد كوفيد اختبار سلبي
+              مختوم بختم المختبر المعتمد أو برمز يشير إلى ساعة وتاريخ العينة. مطلوب نسخة ورقية من الأختبار وليست
+              إلكترونية
+              ..
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile4" role="tabpanel" aria-labelledby="profile4-tab">
+            <h4>ما هو فيروس كوفيد؟ 2</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact4" role="tabpanel" aria-labelledby="contact4-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four4" role="tabpanel" aria-labelledby="four4-tab">
+            <h4>كيف ينتشر الفيروس ؟ 4</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five4" role="tabpanel" aria-labelledby="five4-tab">
+            <h4>ما هى الأعراض؟ 5 </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home5" role="tabpanel" aria-labelledby="home5-tab">
+            <h4>بروتوكولات للجامعات والمدارس</h4>
+            <h6>النقط الرئيسية </h6>
+            <p>
+              يستفيد الطلاب من التعلم الشخصي ، ولا تزال العودة بأمان إلى أولويةالتدريس الشخصي .
+            </p>
+            <p>
+              التطعيم هو استراتيجية الوقاية الصحية العامة الرائدة لإنهاء جائحة كوفيد. يمكن أن يساعد الترويج للتطعيم
+              المدارس على العودة بأمان إلى التعلم الشخصي وكذلك الأنشطة اللامنهجية والرياضات.
+            </p>
+            <p>
+              يجب على الطلاب والمعلمين والموظفين البقاء في المنزل عندما تظهر عليهم علامات أي مرض معدي وذهابهم الى دكتور
+              الرعاية الصحية الخاص بهم للاختبار والرعاية.
+            </p>
+            <p>
+              يؤكد هذا التوجيه على تنفيذ استراتيجيات وقائية متعددة الطبقات لحماية الطلاب والمعلمين والموظفين والزوار
+              وغيرهم من أفراد أسرهم ودعم التعلم الشخصي.
+            </p>
+            <p>
+              يجب أن تراقب المنطقة المحلية انتقال العدوى في المجتمع ، وتغطية التطعيم ، واختبار الفحص ، وحدوث الفاشيات
+              لتوجيه
+              القرارات على مستوى استراتيجيات الوقاية متعددة المستويات (على سبيل المثال ، المادية
+              التباعد ، اختبار الفرز).
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile5" role="tabpanel" aria-labelledby="profile5-tab">
+            <h4>ما هو فيروس كوفيد؟ 2</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact5" role="tabpanel" aria-labelledby="contact5-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four5" role="tabpanel" aria-labelledby="four5-tab">
+            <h4>كيف ينتشر الفيروس؟ 4</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five5" role="tabpanel" aria-labelledby="five5-tab">
+            <h4>ما هى الأعراض؟ 5</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home6" role="tabpanel" aria-labelledby="home6-tab">
+            <h4>منزل لرعاية مرضى كوفيد فيه؟</h4>
+            <p>
+              إذا أمكن ، اجعل الشخص المريض يستخدم غرفة نوم وحمام منفصلين. إذا أمكن ، اجعل الشخص المريض يقيم في "غرفة
+              المرض" الخاصة به أو في منطقة خاصة به وبعيدًا عن الآخرين. حاول أن تبقى على بعد ستة أقدام على الأقل من الشخص
+              المريض. مساحة مشتركة: إذا كان عليك مشاركة مساحة ، فتأكد من تدفق هواء جيد في الغرفة.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile6" role="tabpanel" aria-labelledby="profile6-tab">
+            <h4>ما هو فيروس كوفيد؟ 2</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact6" role="tabpanel" aria-labelledby="contact6-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four6" role="tabpanel" aria-labelledby="four6-tab">
+            <h4>كيف ينتشر الفيروس؟ 4 </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="five6" role="tabpanel" aria-labelledby="five6-tab">
+            <h4>ما هى الأعراض؟ 5</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="home7" role="tabpanel" aria-labelledby="home7-tab">
+            <h4>كيف تحمي نفسك والآخرين؟</h4>
+            <p>
+              احصل على التطعيم وابق على اطلاع دائم على لقاحات كوفيد الخاصة بك.
+            </p>
+            <p>
+              ارتدى كمامة
+            </p>
+            <p>
+              ابق على ستة أقدام من الاخرين
+            </p>
+            <p>
+              تجنب الأماكن المزدحمة سيئة التهوية
+            </p>
+            <p>
+              اختبر نفسك لمنع الانتشار للآخرين
+            </p>
+            <p>
+              اغسل يديك كثيرًا
+            </p>
+            <p>
+              غطِّ السعال والعطس
+            </p>
+            <p>
+              نظف وطهر
+            </p>
+            <p>
+              راقب صحتك يوميًا
+            </p>
+            <p>
+              اتبع ارشادات الحجر الصحي
+            </p>
+            <p>
+              اتبع ارشادات العزلة
+            </p>
+            <p>
+              اتخذ الاحتياطات اللازمة عند السفر
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact7" role="tabpanel" aria-labelledby="contact7-tab">
+            <h4>
+              ما الفرق بين كوفيد والانفلونزا؟ 3
+            </h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="four7" role="tabpanel" aria-labelledby="four7-tab">
+            <h4>كيف ينتشر الفيروس؟ 4/h4>
+              <p>
+                غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة
+                ،
+                والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+              </p>
+              <p>
+                ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+                الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ،
+                وآداب
+                الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي
+                الجيد
+                هي إجراءات ضرورية للوقاية من كلتا العدوى .
+              </p>
+              <p>
+                تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+                إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+              </p>
+              <p>
+                في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+                معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+                رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+                عدوى الإنفلونزا.
+              </p>
+          </div>
+          <div class="tab-pane fade" id="five7" role="tabpanel" aria-labelledby="five7-tab">
+            <h4>ما هى الأعراض؟ 5</h4>
+            <p>
+              غالبًا ما تكون الأعراض الأولى لعدوى كوفيد والإنفلونزا متشابهة جدًا. كلاهما يسبب حمى وأعراض تنفسية مماثلة ،
+              والتي يمكن أن تتراوح بعد ذلك من مرض خفيف إلى شديد وأحيانًا يمكن أن تكون قاتلة.
+            </p>
+            <p>
+              ينتقل كلا الفيروسين أيضًا بنفس الطريقة ، عن طريق السعال أو العطس ، أو عن طريق ملامسة اليدين أو الأسطح أو
+              الأشياء الملوثة بالفيروس. نتيجة لذلك ، فإن نفس تدابير الصحة العامة ، مثل نظافة اليدين (غسل اليدين) ، وآداب
+              الجهاز التنفسي الجيدة (السعال في مرفقك أو في منديل والتخلص من الأنسجة على الفور) ، والتنظيف المنزلي الجيد
+              هي إجراءات ضرورية للوقاية من كلتا العدوى .
+            </p>
+            <p>
+              تعد سرعة الانتقال فرقًا مهمًا بين الفيروسين. عادةً ما يكون للإنفلونزا فترة حضانة أقصر (الفترة من العدوى
+              إلى ظهور الأعراض) مقارنة بـكوفيد. هذا يعني أن الإنفلونزا يمكن أن تنتشر بشكل أسرع من كوفيد.
+            </p>
+            <p>
+              في حين أن نطاق أعراض الفيروسين متشابه ، يبدو أن الجزء المصاب بمرض شديد أعلى بالنسبة لـ كوفيد. في حين أن
+              معظم الأشخاص يعانون من أعراض خفيفة ، فإن حوالي (15٪) من الأشخاص يعانون من عدوى شديدة و (5٪) يحتاجون إلى
+              رعاية مركزة في وحدة العناية المركزة بالمستشفى. نسب الإصابات الحادة والحادة بـ كوفيد أعلى منها في حالات
+              عدوى الإنفلونزا.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block script %}
+<script src="/static/js/jquery-3.4.1.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 <!-- <script src="/static/vendors/corona-live/dashboard.js"></script> -->
-  <script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
-  <script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
-  <script src="/static/vendors/slick/slick.min.js"></script>
-  <script src="/static/vendors/scroll-animation/jquery.parallax-scroll.js"></script>
-  <script src="/static/vendors/scroll-animation/parallax.js"></script>
-  <script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="/static/js/jquery.validate.min.js"></script>
-  <script src="/static/js/theme.js"></script>
-  {% endblock %}
+<script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
+<script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
+<script src="/static/vendors/slick/slick.min.js"></script>
+<script src="/static/vendors/scroll-animation/jquery.parallax-scroll.js"></script>
+<script src="/static/vendors/scroll-animation/parallax.js"></script>
+<script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/static/js/jquery.validate.min.js"></script>
+<script src="/static/js/theme.js"></script>
+{% endblock %}
