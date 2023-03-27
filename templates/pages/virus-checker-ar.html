@@ -1,189 +1,41 @@
 {% extends 'layouts/virius-checker-ar.html' %} {% block title %}Virius Checker - CA-MIL{% endblock %}
 {% block content %}
-        <div class="pagepiling">
-            <div class="pp-scrollable section active">
-                <div class="scroll-wrap">
-                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
-                    </div>
-                    <div class="scrollable-content">
-                        <div class="container">
-                            <div class="virus_checker_content">
-                                <div class="main_title">
-                                    <h5>Think you might be affected?</h5>
-                                    <h2>Find out what to do for possible coronavirus infection</h2>
-                                </div>
-                                <h4>You should call <span>123</span> if you have:</h4>
-                                <ul class="list-unstyled">
-                                    <li><i class="linearicons-heart-pulse"></i><span>Signs of a heart attack:</span>
-                                        pain like a very tight band, heavy weight
-                                        or squeezing in the centre of your chest.</li>
-                                    <li><i class="linearicons-brain"></i><span>Signs of a stroke:</span> face drooping
-                                        on one side, can’t hold both arms
-                                        up, difficulty speaking.</li>
-                                    <li><i class="linearicons-wind"></i><span>Severe difficulty breathing:</span>
-                                        gasping, not being able to get words
-                                        out, choking or lips turning blue.</li>
-                                    <li><i class="linearicons-drop2"></i><span>Heavy bleeding</span> - that won’t stop.
-                                    </li>
-                                    <li><i class="linearicons-power"></i><span>Severe injuries</span> - or deep cuts
-                                        after a serious accident.</li>
-                                    <li><i class="linearicons-ambulance"></i><span>Seizure (fit): </span> someone is
-                                        shaking or jerking because of a fit, or
-                                        is unconscious (can’t be woken up).</li>
-                                </ul>
-                                <div class="checked_button_info">
-                                    <h4>Do you have any of the above?</h4>
-                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
-                                        <input type="radio" name="yes" id="yes" value="yes">
-                                        <label for="yes">Yes</label>
-                                    </div>
-                                    <div class="check_btn moveDown">
-                                        <input type="radio" name="yes" id="no" value="no">
-                                        <label for="no">No</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="pagepiling">
+    <div class="pp-scrollable section active">
+        <div class="scroll-wrap">
+            <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
             </div>
-            <div class="pp-scrollable section">
-                <div class="scroll-wrap">
-                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
-                    </div>
-                    <div class="scrollable-content">
-                        <div class="container">
-                            <div class="virus_checker_content">
-                                <p>We need to know some details about your age, sex and the area you live.</p>
-                                <p>Please give your details or, if you are asking about someone else, the details of the
-                                    person you are asking about.</p>
-                                <p>This will help get a better idea of who is being affected by coronavirus.</p>
-                                <form action="#" class="appoinment_form select_form">
-                                    <div class="form-group">
-                                        <input class="form-control" type="number" id="age" name="age" placeholder>
-                                        <label for="age">What is your age in years?</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" type="number" id="code" name="code" placeholder>
-                                        <label for="code">What is your postcode?</label>
-                                    </div>
-                                </form>
-                                <div class="checked_button_info">
-                                    <h4>What is your sex?</h4>
-                                    <div class="check_btn">
-                                        <input type="radio" name="gender" id="male" value="male">
-                                        <label for="male">Male</label>
-                                    </div>
-                                    <div class="check_btn">
-                                        <input type="radio" name="gender" id="female" value="female">
-                                        <label for="female">Female</label>
-                                    </div>
-                                    <div class="check_btn">
-                                        <input type="radio" name="gender" id="other" value="other">
-                                        <label for="other">Other/prefer not to answer</label>
-                                    </div>
-                                </div>
-                                <button type="button" class="continue_btn moveDown">Continue</button>
-                            </div>
+            <div class="scrollable-content">
+                <div class="container">
+                    <div class="virus_checker_content">
+                        <div class="main_title">
+                            <h5>هل تعتقد انك مريض؟</h5>
+                            <h2>تعرف على ما يجب عليك القيام به حينما تصاب بفيروس كوفيد </h2>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pp-scrollable section">
-                <div class="scroll-wrap">
-                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
-                    </div>
-                    <div class="scrollable-content">
-                        <div class="container">
-                            <div class="virus_checker_content">
-                                <div class="main_title">
-                                    <h5>Advice on action to take for concern about coronavirus changed</h5>
-                                    <h2>You need to take action if you have either:</h2>
-                                </div>
-                                <div class="row virus_symptom_inner">
-                                    <div class="col-md-6">
-                                        <div class="media virus_symptom">
-                                            <div class="round_img">
-                                                <img src="/static/images/fever.png" alt>
-                                            </div>
-                                            <div class="media-body">
-                                                <h5>A fever <span>(high temperature)</span></h5>
-                                                <p>Even if you do not have a thermometer, you should answer 'yes' if
-                                                    your back or chest feels hot to touch.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="media virus_symptom">
-                                            <div class="round_img">
-                                                <img src="/static/images/cough.png" alt>
-                                            </div>
-                                            <div class="media-body">
-                                                <h5>A new continuous cough</h5>
-                                                <p>Coughing a lot for more than an hour, or 3 or more coughing episodes
-                                                    in 24 hours.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checked_button_info">
-                                    <h4>Do you have either of these symptoms?</h4>
-                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
-                                        <input type="radio" name="yes" id="yes2" value="yes2">
-                                        <label for="yes2">Yes</label>
-                                    </div>
-                                    <div class="check_btn moveDown">
-                                        <input type="radio" name="yes" id="no2" value="no2">
-                                        <label for="no2">No</label>
-                                    </div>
-                                </div>
+                        <h4>يجب عليك الاتصال <span>123</span> اذا كان لديك</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="linearicons-heart-pulse"></i><span>علامات النوبة القلبية</span>
+                                ألم مثل رباط ضيق جدًا أو وزن ثقيل أو ضغط في منتصف صدرك.</li>
+                            <li><i class="linearicons-brain"></i><span>علامات السكتة الدماغية</span> تدلى الوجه من جانب
+                                واحد ، لا يستطيع رفع ذراعيه ، صعوبة في التحدث.</li>
+                            <li><i class="linearicons-wind"></i><span>صعوبة شديدة في التنفس</span>
+                                يلهث ، عدم القدرة على إخراج الكلمات ، الاختناق أو تحول الشفاه إلى اللون الأزرق.</li>
+                            <li><i class="linearicons-drop2"></i><span>نزيف شديد</span> هذا لن يتوقف.
+                            </li>
+                            <li><i class="linearicons-power"></i><span>إصابات خطيرة</span> أو جروح عميقة بعد حادث خطير
+                            </li>
+                            <li><i class="linearicons-ambulance"></i><span>نوبة </span>
+                                شخص ما يرتجف أو يرتجف بسبب نوبة أو فاقد للوعي (لا يمكن إيقاظه).</li>
+                        </ul>
+                        <div class="checked_button_info">
+                            <h4>هل لديك أي مما سبق؟</h4>
+                            <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                <input type="radio" name="yes" id="yes" value="yes">
+                                <label for="yes">نعم</label>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pp-scrollable section">
-                <div class="scroll-wrap">
-                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
-                    </div>
-                    <div class="scrollable-content">
-                        <div class="container">
-                            <div class="virus_checker_content">
-                                <div class="checked_button_info">
-                                    <h4>Are you too breathless to be able to speak more than
-                                        a few words?</h4>
-                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
-                                        <input type="radio" name="yes" id="yes3" value="yes">
-                                        <label for="yes3">Yes</label>
-                                    </div>
-                                    <div class="check_btn moveDown">
-                                        <input type="radio" name="yes" id="no3" value="no">
-                                        <label for="no3">No</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pp-scrollable section active">
-                <div class="scroll-wrap">
-                    <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
-                    </div>
-                    <div class="scrollable-content">
-                        <div class="container">
-                            <div class="virus_checker_content">
-                                <div class="checked_button_info">
-                                    <h4>Do you live with someone who has developed fever or new continuous cough?</h4>
-                                    <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
-                                        <input type="radio" name="yes" id="yes4" value="yes">
-                                        <label for="yes4">Yes</label>
-                                    </div>
-                                    <div class="check_btn" data-toggle="modal" data-target="#recommenddModal">
-                                        <input type="radio" name="yes" id="no4" value="no">
-                                        <label for="no4">No</label>
-                                    </div>
-                                </div>
+                            <div class="check_btn moveDown">
+                                <input type="radio" name="yes" id="no" value="no">
+                                <label for="no">لا</label>
                             </div>
                         </div>
                     </div>
@@ -191,90 +43,226 @@
             </div>
         </div>
     </div>
+    <div class="pp-scrollable section">
+        <div class="scroll-wrap">
+            <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+            </div>
+            <div class="scrollable-content">
+                <div class="container">
+                    <div class="virus_checker_content">
+                        <p>نحتاج إلى معرفة بعض التفاصيل حول عمرك وجنسك والمنطقة التي تعيش فيها.</p>
+                        <p>يرجى تقديم التفاصيل الخاصة بك أو ، إذا كنت تسأل عن شخص آخر ، تفاصيل الشخص الذي تسأل عنه.</p>
+                        <p>سيساعد ذلك في تكوين فكرة أفضل عن الأشخاص المصابين بفيروس كوفيد.</p>
+                        <form action="#" class="appoinment_form select_form">
+                            <div class="form-group">
+                                <input class="form-control" type="number" id="age" name="age" placeholder>
+                                <label for="age">ما هو عمرك بالسنوات؟</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" id="code" name="code" placeholder>
+                                <label for="code">ما هو الرمز البريدي الخاص بك؟</label>
+                            </div>
+                        </form>
+                        <div class="checked_button_info">
+                            <h4>ما هو جنسك؟</h4>
+                            <div class="check_btn">
+                                <input type="radio" name="gender" id="male" value="male">
+                                <label for="male">ذكر</label>
+                            </div>
+                            <div class="check_btn">
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">أنثى</label>
+                            </div>
+                            <div class="check_btn">
+                                <input type="radio" name="gender" id="other" value="other">
+                                <label for="other">أخرى / يفضل عدم الإجابة</label>
+                            </div>
+                        </div>
+                        <button type="button" class="continue_btn moveDown">اكمل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pp-scrollable section">
+        <div class="scroll-wrap">
+            <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+            </div>
+            <div class="scrollable-content">
+                <div class="container">
+                    <div class="virus_checker_content">
+                        <div class="main_title">
+                            <h5>بعض النصائح التى يتواجب اتخاذها للقلق بشأن فيروس كوفيد</h5>
+                            <h2>تحتاج إلى اتخاذ إجراء إذا كان لديك إما</h2>
+                        </div>
+                        <div class="row virus_symptom_inner">
+                            <div class="col-md-6">
+                                <div class="media virus_symptom">
+                                    <div class="round_img">
+                                        <img src="/static/images/fever.png" alt>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>حمى <span>(درجة حرارة عالية)</span></h5>
+                                        <p>حتى إذا لم يكن لديك مقياس حرارة ، يجب أن تجيب بـ "نعم" إذا كان ظهرك أو صدرك
+                                            ساخنًا عند اللمس.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media virus_symptom">
+                                    <div class="round_img">
+                                        <img src="/static/images/cough.png" alt>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>سعال مستمر</h5>
+                                        <p>السعال الشديد لمدة تزيد عن ساعة ، أو 3 نوبات سعال أو أكثر في غضون 24 ساعة.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checked_button_info">
+                            <h4>هل لديك أي من هذه الأعراض؟</h4>
+                            <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                <input type="radio" name="yes" id="yes2" value="yes2">
+                                <label for="yes2">نعم</label>
+                            </div>
+                            <div class="check_btn moveDown">
+                                <input type="radio" name="yes" id="no2" value="no2">
+                                <label for="no2">لا</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pp-scrollable section">
+        <div class="scroll-wrap">
+            <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+            </div>
+            <div class="scrollable-content">
+                <div class="container">
+                    <div class="virus_checker_content">
+                        <div class="checked_button_info">
+                            <h4>هل تشعر بضيق شديد لدرجة أنك لا تستطيع التحدث بأكثر من بضع كلمات؟</h4>
+                            <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                <input type="radio" name="yes" id="yes3" value="yes">
+                                <label for="yes3">نعم</label>
+                            </div>
+                            <div class="check_btn moveDown">
+                                <input type="radio" name="yes" id="no3" value="no">
+                                <label for="no3">لا </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pp-scrollable section active">
+        <div class="scroll-wrap">
+            <div class="p-section-bg" style="background-image:url(&#x27;/static/images/checker_map.png&#x27;);">
+            </div>
+            <div class="scrollable-content">
+                <div class="container">
+                    <div class="virus_checker_content">
+                        <div class="checked_button_info">
+                            <h4>هل تعيش مع شخص أصيب بحمى أو سعال جديد؟</h4>
+                            <div class="check_btn" data-toggle="modal" data-target="#ambulanceModal">
+                                <input type="radio" name="yes" id="yes4" value="yes">
+                                <label for="yes4">نعم</label>
+                            </div>
+                            <div class="check_btn" data-toggle="modal" data-target="#recommenddModal">
+                                <input type="radio" name="yes" id="no4" value="no">
+                                <label for="no4">لا</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
-    <div class="modal fade ambulanceModal" id="ambulanceModal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content text-center">
-                <i class="linearicons-ambulance"></i>
-                <h6>Highly recommended</h6>
-                <h2>Please call 123 immediately and<br> ask for an ambulance.</h2>
-                <button type="button" class="exit_btn" data-dismiss="modal">Exit</button>
-            </div>
+<div class="modal fade ambulanceModal" id="ambulanceModal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <i class="linearicons-ambulance"></i>
+            <h6>ينصح به بشده</h6>
+            <h2>يرجى الاتصال بالرقم 123 على الفور و<br> اطلب سيارة إسعاف</h2>
+            <button type="button" class="exit_btn" data-dismiss="modal">خروج</button>
         </div>
     </div>
+</div>
 
-    <div class="modal fade recommenddModal" id="recommenddModal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="scroll_body">
-                    <div class="main_title">
-                        <h5>Recommendation to your details</h5>
-                        <h2>Please call NHS 105 or 15335 and speak to a nurse.</h2>
-                    </div>
-                    <p>Tell them that you have been advised by this tool to call about coronavirus symptoms. The phone
-                        service will be very busy but you must wait until you get through.</p>
-                    <h6>You also need to isolate yourself and stay indoors for at least 7 days.</h6>
-                    <ul class="list-unstyled">
-                        <li><i class="linearicons-arrow-right"></i><span>Everyone you live with needs</span> to isolate
-                            themselves at home for at least <span>14 days.</span></li>
-                        <li><i class="linearicons-arrow-right"></i>If <span>they develop fever or cough</span> during
-                            that
-                            time they should complete this form.</li>
-                        <li><i class="linearicons-arrow-right"></i>Even though you are in the house together, you should
-                            <span>try
-                                and stay away from each
-                                other as much as you can.</span>
-                        </li>
-                        <li><i class="linearicons-arrow-right"></i>If you live with someone aged 70 or older, or who has
-                            a
-                            long-term health condition
-                            or is pregnant, try and find somewhere else for them to stay for 14 days (where they
-                            can isolate themselves).</li>
-                    </ul>
-                    <p><span>Find out more about how to self-isolate.</span> Please read and follow this guidance
-                        carefully
-                        to protect others. To protect yourself and others, do not go to a GP, pharmacy or hospital.</p>
-                    <h6>If you’re away from home:</h6>
-                    <ul class="list-unstyled">
-                        <li><i class="linearicons-arrow-right"></i>Go straight home by the most direct route</li>
-                        <li><i class="linearicons-arrow-right"></i>Stay at least 2 metres away from people if possible.
-                        </li>
-                        <li><i class="linearicons-arrow-right"></i>Avoid public transport if you can.</li>
-                    </ul>
+<div class="modal fade recommenddModal" id="recommenddModal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="scroll_body">
+                <div class="main_title">
+                    <h5>التوصية بالتفاصيل الخاصة بك</h5>
+                    <h2>يرجى الاتصال على 105 أو 15335 والتحدث إلى ممرضة</h2>
                 </div>
-                <button type="button" class="exit_btn" data-dismiss="modal">Exit</button>
+                <p>أخبرهم أن هذه الأداة نصحتك بالاتصال بأعراض فيروس كوفيد. ستكون خدمة الهاتف مشغولة للغاية ولكن يجب
+                    عليك الانتظار حتى تصل</p>
+                <h6>تحتاج أيضًا إلى عزل نفسك والبقاء في المنزل لمدة 7 أيام على الأقل.</h6>
+                <ul class="list-unstyled">
+                    <li><i class="linearicons-arrow-right"></i><span> كل شخص يعيش معك يحتاج</span> لعزل نفسهم في المنزل
+                        على الأقل <span>14 يوم .</span></li>
+                    <li><i class="linearicons-arrow-right"></i>If <span>يصابون بالحمى أو السعال</span> خلال ذلك الوقت
+                        يجب عليهم إكمال هذا النموذج.</li>
+                    <li><i class="linearicons-arrow-right"></i>حتى لو كنتم في المنزل معًا ، يجب عليك
+                        <span>حاولو الابتعاد عن بعضكما البعض قدر الإمكان.</span>
+                    </li>
+                    <li><i class="linearicons-arrow-right"></i>إذا كنت تعيش مع شخص يبلغ من العمر 70 عامًا أو أكبر ، أو
+                        لديه حالة صحية طويلة الأمد أو حامل ، فحاول العثور على مكان آخر ليقيم فيه لمدة 14 يومًا (حيث
+                        يمكنه عزل أنفسهم).</li>
+                </ul>
+                <p><span>اكتشف المزيد حول كيفية عزل الذات</span> يرجى قراءة هذا الدليل واتباعه بعناية لحماية الآخرين.
+                    لحماية نفسك والآخرين ، لا تذهب إلى طبيب عام أو صيدلية أو مستشفىl.</p>
+                <h6>إذا كنت بعيدًا عن المنزل</h6>
+                <ul class="list-unstyled">
+                    <li><i class="linearicons-arrow-right"></i>اذهب إلى المنزل من الطريق الأكثر مباشرة</li>
+                    <li><i class="linearicons-arrow-right"></i>ابق على بعد مترين على الأقل من الناس إن أمكن.
+                    </li>
+                    <li><i class="linearicons-arrow-right"></i>تجنب وسائل النقل العام إذا استطعت.</li>
+                </ul>
             </div>
+            <button type="button" class="exit_btn" data-dismiss="modal">خروج</button>
         </div>
     </div>
-    <div class="modal fade search_modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <img src="/static/images/icon/close-white.png" alt>
-        </button>
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Type here..."
-                            aria-label="Recipient's username">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button"><i
-                                    class="linearicons-magnifier"></i></button>
-                        </div>
+</div>
+<div class="modal fade search_modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <img src="/static/images/icon/close-white.png" alt>
+    </button>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type here..."
+                        aria-label="Recipient's username">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button"><i
+                                class="linearicons-magnifier"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block script %}
-    <script src="/static/js/jquery-3.4.1.min.js"></script>
-    <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+{% block script %}
+<script src="/static/js/jquery-3.4.1.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 <!-- <script src="/static/vendors/corona-live/dashboard.js"></script> -->
-    <script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
-    <script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
-    <script src="/static/vendors/slick/slick.min.js"></script>
-    <script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="/static/js/theme.js"></script>
-    {% endblock %}
+<script src="/static/vendors/isotop/imagesloaded.pkgd.min.js"></script>
+<script src="/static/vendors/isotop/isotope.pkgd.min.js"></script>
+<script src="/static/vendors/slick/slick.min.js"></script>
+<script src="/static/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/static/js/theme.js"></script>
+{% endblock %}
