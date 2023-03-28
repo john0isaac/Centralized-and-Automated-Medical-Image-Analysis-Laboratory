@@ -254,25 +254,27 @@ def create_app(test_config=None):
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            print("I'm here 1")
+
             model =  tf.keras.models.load_model('.\\cnn_segmentation_pneumonia.h5', custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
-            print("I'm here 2")
+
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
+            
             img = image.img_to_array(img)
 
-            x=np.expand_dims([img], axis=-1)
+            img=np.expand_dims(img, axis=0)
 
-            images = np.vstack([x])
-            classes = model.predict(images)
-            print("I'm here 3")
-            print(classes)
-            pred = classes
+            classes = model.predict(img, batch_size=1)
+            classes = np.squeeze(classes, axis=0)
+            pred = resize(classes, (1024, 1024), mode='reflect')
             comp = pred[:, :, 0] > 0.5
             # apply connected components
             comp = measure.label(comp)
             # apply bounding boxes
             predictionString = ''
+            prediction = 0
+            percentage = 0
+            prediction = "Negative"
             for region in measure.regionprops(comp):
                 # retrieve x, y, height and width
                 y, x, y2, x2 = region.bbox
@@ -282,9 +284,8 @@ def create_app(test_config=None):
                 conf = np.mean(pred[y:y+height, x:x+width])
                 # add to predictionString
                 predictionString += str(conf) + ' ' + str(x) + ' ' + str(y) + ' ' + str(width) + ' ' + str(height) + ' '
-                print(predictionString)
-            prediction = 0
-            percentage = 0
+                percentage = round(float(predictionString.split()[0]) * 100, 2)
+                prediction = "Positive"
             return jsonify({
                 'prediction': prediction,
                 'success': True,
