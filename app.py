@@ -62,14 +62,48 @@ def create_app(test_config=None):
 
     @app.route("/")
     def landing_page():
+        return render_template("pages/index.html")
+    
+    @app.route("/ar")
+    def landing_ar_page():
         return render_template("pages/index-ar.html")
     
     @app.route("/about")
     def about_page():
+        return render_template("pages/about.html")
+    
+    @app.route("/ar/about")
+    def about_ar_page():
         return render_template("pages/about-ar.html")
     
     @app.route("/contact", methods=["GET", "POST"])
     def contact_page():
+        if request.method == 'POST':
+            body = request.get_json()
+            name = body.get('name', None)
+            email = body.get('email', None)
+            phone = body.get('phone', None)
+            message = body.get('message', None)
+            subject = 'New Message From '+ email +' Via Your Webstie'
+            body = "Hello,\n"\
+            "This is "+name+ " from your website.\n\n"\
+            "My Email: " +email+'.\n'\
+            "My Message: "+ message
+            try:
+                msg = Message(subject, sender='johnaziz269@gmail.com', recipients=['johnaziz269@gmail.com'])
+                msg.body = body
+                mail.send(msg)
+                return jsonify({
+                'success': True 
+                })
+            except:
+                return jsonify({
+                    'success': False 
+                })
+        return render_template("pages/contact.html")
+
+    @app.route("/ar/contact", methods=["GET", "POST"])
+    def contact_ar_page():
         if request.method == 'POST':
             body = request.get_json()
             name = body.get('name', None)
@@ -122,41 +156,106 @@ def create_app(test_config=None):
         return jsonify({
                     'success': False 
                 }), 405
+    
+    @app.route("/ar/newsletter-subscribe", methods=["POST"])
+    def subscribe_to_newsletter_ar():
+        if request.method == 'POST':
+            body = request.get_json()
+            email = body.get('email', None)
+            filePath = app.config['EMAIL_FILE_PATH']
+            with open(filePath, "a") as f:
+                f.write(email+','+'\n')
+            
+            subject = 'You Have Sucessfully Subscribed to our Newsletter'
+            body = "Hello from CovDec Team,\n\n"\
+            "Thank you for subscribing to our monthly newsletter"+'.\n\n'\
+            "Regards,"
+            try:
+                msg = Message(subject, sender='johnaziz269@gmail.com', recipients=[email])
+                msg.body = body
+                mail.send(msg)
+                return jsonify({
+                'success': True 
+                })
+            except:
+                return jsonify({
+                    'success': False 
+                })
+            
+        return jsonify({
+                    'success': False 
+                }), 405
 
     @app.route("/faq")
     def faq_page():
+        return render_template("pages/faq.html")
+
+    @app.route("/ar/faq")
+    def faq_ar_page():
         return render_template("pages/faq-ar.html")
-    
+
     @app.route("/prevention")
     def prevention_page():
+        return render_template("pages/prevention.html")
+
+    @app.route("/ar/prevention")
+    def prevention_ar_page():
         return render_template("pages/prevention-ar.html")
 
     @app.route("/search")
     def search_page():
+        return render_template("pages/search.html")
+
+    @app.route("/ar/search")
+    def search_ar_page():
         return render_template("pages/search-ar.html")
 
     @app.route("/symptom")
     def symptom_page():
+        return render_template("pages/symptom.html")
+
+    @app.route("/ar/symptom")
+    def symptom_ar_page():
         return render_template("pages/symptom-ar.html")
    
     @app.route("/symptom-checker-lung")
     def symptom_checker_lung_page():
-        return render_template("pages/symptom-checker-lung-ar.html")
+        return render_template("pages/symptom-checker-lung.html")
     
+    @app.route("/ar/symptom-checker-lung")
+    def symptom_checker_lung_ar_page():
+        return render_template("pages/symptom-checker-lung-ar.html")
+
     @app.route("/symptom-checker-covid")
     def symptom_checker_covid_page():
+        return render_template("pages/symptom-checker-covid.html")
+    
+    @app.route("/ar/symptom-checker-covid")
+    def symptom_checker_covid_ar_page():
         return render_template("pages/symptom-checker-covid-ar.html")
     
     @app.route("/symptom-checker-pneumonia")
     def symptom_checker__pneumonia_page():
+        return render_template("pages/symptom-checker-pneumonia.html")
+    
+    @app.route("/ar/symptom-checker-pneumonia")
+    def symptom_checker__pneumonia_ar_page():
         return render_template("pages/symptom-checker-pneumonia-ar.html")
 
     @app.route("/virus-checker")
     def virus_checker_page():
+        return render_template("pages/virus-checker.html")
+    
+    @app.route("/ar/virus-checker")
+    def virus_checker_ar_page():
         return render_template("pages/virus-checker-ar.html")
 
     @app.route("/tracker")
     def tracker_page():
+        return render_template("pages/tracker.html")
+    
+    @app.route("/ar/tracker")
+    def tracker_ar_page():
         return render_template("pages/tracker-ar.html")
     
     @app.route("/prediction-covid", methods=["POST"])
@@ -196,6 +295,43 @@ def create_app(test_config=None):
                 'percentage': percentage
                 }), 200
     
+    @app.route("/ar/prediction-covid", methods=["POST"])
+    def prediction_covid_ar_page():
+        # check if the post request has the file part
+        if request.method == 'POST':
+            if 'files' not in request.files:
+                flash('No file part')
+            file = request.files['files']
+            # if user does not select file, browser also
+            # submit an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
+            
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img = image.load_img(path, target_size=(200, 200))
+            x=image.img_to_array(img)
+            x /= 255
+            x=np.expand_dims(x, axis=0)
+            images = np.vstack([x])
+            
+            classes = model.predict(images, batch_size=10)
+            percentage = round(classes[0][0] * 100, 2)
+            if classes[0]>0.5:
+                prediction = "Positive"
+            else:
+                prediction = "Negative"
+                percentage = 100 - percentage
+            return jsonify({
+                'prediction': prediction,
+                'success': True,
+                'percentage': percentage
+                }), 200
+
     @app.route("/prediction-lung-cancer", methods=["POST"])
     def prediction_lung_cancer_page():
         # check if the post request has the file part
@@ -240,8 +376,106 @@ def create_app(test_config=None):
                 'percentage': percentage
                 }), 200
             """
+
+    @app.route("/ar/prediction-lung-cancer", methods=["POST"])
+    def prediction_lung_cancer_ar_page():
+        # check if the post request has the file part
+        if request.method == 'POST':
+            if 'files' not in request.files:
+                flash('No file part')
+            file = request.files['files']
+            # if user does not select file, browser also
+            # submit an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            
+            print("I'm here 1")
+            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
+            print("I'm here 2")
+            
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img = image.load_img(path, target_size=(200, 200))
+            x=image.img_to_array(img)
+            print(x.shape)
+            x /= 255
+            x=np.expand_dims(x, axis=0)
+            print(x.shape)
+            images = np.vstack([x])
+            print(images.shape)
+            classes = model.predict(images, batch_size=10)
+            print("I'm here 3")
+            print(classes)
+            return 0
+            """
+            if classes[0]>0.5:
+                prediction = "Positive"
+            else:
+                prediction = "Negative"
+                percentage = 100 - percentage
+            return jsonify({
+                'prediction': prediction,
+                'success': True,
+                'percentage': percentage
+                }), 200
+            """
+
     @app.route("/prediction-pneumonia", methods=["POST"])
     def prediction_pneumonia_page():
+        # check if the post request has the file part
+        if request.method == 'POST':
+            if 'files' not in request.files:
+                flash('No file part')
+            file = request.files['files']
+            # if user does not select file, browser also
+            # submit an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            model =  tf.keras.models.load_model('.\\cnn_segmentation_pneumonia.h5', custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+
+            path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
+            
+            img = image.img_to_array(img)
+
+            img=np.expand_dims(img, axis=0)
+
+            classes = model.predict(img, batch_size=1)
+            classes = np.squeeze(classes, axis=0)
+            pred = resize(classes, (1024, 1024), mode='reflect')
+            comp = pred[:, :, 0] > 0.5
+            # apply connected components
+            comp = measure.label(comp)
+            # apply bounding boxes
+            predictionString = ''
+            prediction = 0
+            percentage = 0
+            prediction = "Negative"
+            for region in measure.regionprops(comp):
+                # retrieve x, y, height and width
+                y, x, y2, x2 = region.bbox
+                height = y2 - y
+                width = x2 - x
+                # proxy for confidence score
+                conf = np.mean(pred[y:y+height, x:x+width])
+                # add to predictionString
+                predictionString += str(conf) + ' ' + str(x) + ' ' + str(y) + ' ' + str(width) + ' ' + str(height) + ' '
+                percentage = round(float(predictionString.split()[0]) * 100, 2)
+                prediction = "Positive"
+            return jsonify({
+                'prediction': prediction,
+                'success': True,
+                'percentage': percentage
+                }), 200
+    
+    @app.route("/ar/prediction-pneumonia", methods=["POST"])
+    def prediction_pneumonia_ar_page():
         # check if the post request has the file part
         if request.method == 'POST':
             if 'files' not in request.files:
