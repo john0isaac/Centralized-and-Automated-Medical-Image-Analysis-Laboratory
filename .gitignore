@@ -138,3 +138,4 @@ vars.env
 
 cnn_segmentation_pneumonia.h5
 final_model.h5
+lung_cancer_model.h5
