@@ -321,7 +321,7 @@
         data.append('files', file) // maybe it should be '{target}_cand'
         data.append('name', file.name)
 
-        let url = "/prediction-covid"
+        let url = "/ar/prediction-covid"
         fetch(url, {
             method: 'POST',
             body: data,
