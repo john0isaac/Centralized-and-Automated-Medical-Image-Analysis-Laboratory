@@ -322,9 +322,9 @@ def create_app(test_config=None):
             classes = model.predict(images, batch_size=10)
             percentage = round(classes[0][0] * 100, 2)
             if classes[0]>0.5:
-                prediction = "Positive"
+                prediction = "ايجابي"
             else:
-                prediction = "Negative"
+                prediction = "سلبي"
                 percentage = 100 - percentage
             return jsonify({
                 'prediction': prediction,
@@ -333,7 +333,7 @@ def create_app(test_config=None):
                 }), 200
 
     @app.route("/prediction-lung-cancer", methods=["POST"])
-    def prediction_lung_cancer_page():
+    def prediction_lung_page():
         # check if the post request has the file part
         if request.method == 'POST':
             if 'files' not in request.files:
@@ -346,36 +346,26 @@ def create_app(test_config=None):
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            
-            print("I'm here 1")
-            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
-            print("I'm here 2")
-            
+
+            model =  tf.keras.models.load_model('.\\lung_cancer_model.h5')
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            img = image.load_img(path, target_size=(200, 200))
+            categories = ['Bengin case', 'Malignant case', 'Normal case']
+
+            img = image.load_img(path, target_size=(256, 256))
             x=image.img_to_array(img)
-            print(x.shape)
-            x /= 255
             x=np.expand_dims(x, axis=0)
-            print(x.shape)
-            images = np.vstack([x])
-            print(images.shape)
-            classes = model.predict(images, batch_size=10)
-            print("I'm here 3")
-            print(classes)
-            return 0
-            """
-            if classes[0]>0.5:
-                prediction = "Positive"
-            else:
-                prediction = "Negative"
-                percentage = 100 - percentage
+            pred = model.predict(x)
+
+            max_index = np.argmax(pred)
+            # Convert the greatest number to percentage
+            percentage = round(100 * pred[0][max_index], 2)
+
+            output = categories[np.argmax(pred)]
             return jsonify({
-                'prediction': prediction,
+                'prediction': output,
                 'success': True,
                 'percentage': percentage
                 }), 200
-            """
 
     @app.route("/ar/prediction-lung-cancer", methods=["POST"])
     def prediction_lung_cancer_ar_page():
@@ -391,36 +381,26 @@ def create_app(test_config=None):
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            
-            print("I'm here 1")
-            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
-            print("I'm here 2")
-            
+
+            model =  tf.keras.models.load_model('.\\lung_cancer_model.h5')
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            img = image.load_img(path, target_size=(200, 200))
+            categories = ['ورم حميد', 'ورم خبيث', 'سلبي']
+
+            img = image.load_img(path, target_size=(256, 256))
             x=image.img_to_array(img)
-            print(x.shape)
-            x /= 255
             x=np.expand_dims(x, axis=0)
-            print(x.shape)
-            images = np.vstack([x])
-            print(images.shape)
-            classes = model.predict(images, batch_size=10)
-            print("I'm here 3")
-            print(classes)
-            return 0
-            """
-            if classes[0]>0.5:
-                prediction = "Positive"
-            else:
-                prediction = "Negative"
-                percentage = 100 - percentage
+            pred = model.predict(x)
+
+            max_index = np.argmax(pred)
+            # Convert the greatest number to percentage
+            percentage = round(100 * pred[0][max_index], 2)
+
+            output = categories[np.argmax(pred)]
             return jsonify({
-                'prediction': prediction,
+                'prediction': output,
                 'success': True,
                 'percentage': percentage
                 }), 200
-            """
 
     @app.route("/prediction-pneumonia", methods=["POST"])
     def prediction_pneumonia_page():
@@ -508,7 +488,7 @@ def create_app(test_config=None):
             predictionString = ''
             prediction = 0
             percentage = 0
-            prediction = "Negative"
+            prediction = "سلبي"
             for region in measure.regionprops(comp):
                 # retrieve x, y, height and width
                 y, x, y2, x2 = region.bbox
@@ -519,7 +499,7 @@ def create_app(test_config=None):
                 # add to predictionString
                 predictionString += str(conf) + ' ' + str(x) + ' ' + str(y) + ' ' + str(width) + ' ' + str(height) + ' '
                 percentage = round(float(predictionString.split()[0]) * 100, 2)
-                prediction = "Positive"
+                prediction = "ايجابي"
             return jsonify({
                 'prediction': prediction,
                 'success': True,
