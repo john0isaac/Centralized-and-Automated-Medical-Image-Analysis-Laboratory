@@ -273,7 +273,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
+            model =  tf.keras.models.load_model(app.config['COVID19_PATH'])
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(200, 200))
@@ -310,7 +310,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\covid_classifier_model.h5')
+            model =  tf.keras.models.load_model(app.config['COVID19_PATH'])
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(200, 200))
@@ -347,7 +347,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\lung_cancer_model.h5')
+            model =  tf.keras.models.load_model(app.config['LUNG_CANCER_PATH'])
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             categories = ['Bengin case', 'Malignant case', 'Normal case']
 
@@ -382,7 +382,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\lung_cancer_model.h5')
+            model =  tf.keras.models.load_model(app.config['LUNG_CANCER_PATH'])
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             categories = ['ورم حميد', 'ورم خبيث', 'سلبي']
 
@@ -417,7 +417,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\cnn_segmentation_pneumonia.h5', custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+            model =  tf.keras.models.load_model(app.config['PNEUMONIA_PATH'], custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
@@ -469,7 +469,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model =  tf.keras.models.load_model('.\\cnn_segmentation_pneumonia.h5', custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+            model =  tf.keras.models.load_model(app.config['PNEUMONIA_PATH'], custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")

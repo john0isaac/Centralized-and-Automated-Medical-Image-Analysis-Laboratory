@@ -8,6 +8,11 @@ load_dotenv(dotenv_path)
 UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER')
 SECRET_KEY=os.environ.get('SECRET_KEY')
 EMAIL_FILE_PATH=os.environ.get('EMAIL_FILE_PATH')
+
+LUNG_CANCER_PATH = os.environ.get('LUNG_CANCER_PATH')
+PNEUMONIA_PATH = os.environ.get('PNEUMONIA_PATH')
+COVID19_PATH = os.environ.get('COVID19_PATH')
+
 DEBUG = True
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 587
