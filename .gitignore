@@ -136,6 +136,6 @@ dmypy.json
 
 vars.env
 
-cnn_segmentation_pneumonia.h5
-final_model.h5
-lung_cancer_model.h5
+csr.txt
+certificate.txt
+private_key.txt
