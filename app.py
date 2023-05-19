@@ -272,7 +272,8 @@ def create_app(test_config=None):
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            model_path = app.config['COVID19_PATH']
+
+            model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
             model =  tf.keras.models.load_model(model_path)
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -310,7 +311,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = app.config['COVID19_PATH']
+            model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
             model =  tf.keras.models.load_model(model_path)
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -348,7 +349,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = app.config['LUNG_CANCER_PATH']
+            model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
             model =  tf.keras.models.load_model(model_path)
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -385,7 +386,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = app.config['LUNG_CANCER_PATH']
+            model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
             model =  tf.keras.models.load_model(model_path)
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -422,7 +423,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = app.config['PNEUMONIA_PATH']
+            model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
             model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -475,7 +476,7 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = app.config['PNEUMONIA_PATH']
+            model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
             model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
