@@ -275,17 +275,28 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
-            model =  tf.keras.models.load_model(model_path)
+            #model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
+            #model =  tf.keras.models.load_model(model_path)
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(200, 200))
-            x=image.img_to_array(img)
-            x /= 255
-            x=np.expand_dims(x, axis=0)
-            images = np.vstack([x])
+            img=image.img_to_array(img)
+            img /= 255
+            img=np.expand_dims(img, axis=0)
+            img = np.vstack([img])
             
-            classes = model.predict(images, batch_size=10)
+            #classes = model.predict(img, batch_size=10)
+
+
+            uri = app.config['COVID19_URI']
+            api_key = app.config['COVID19_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            classes = np.array(data, dtype=np.float32)
+
             percentage = round(classes[0][0] * 100, 2)
             if classes[0]>0.5:
                 prediction = "Positive"
@@ -313,17 +324,28 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
-            model =  tf.keras.models.load_model(model_path)
+            #model_path = os.path.join(os.getcwd(), app.config['COVID19_PATH'])
+            #model =  tf.keras.models.load_model(model_path)
             
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(200, 200))
-            x=image.img_to_array(img)
-            x /= 255
-            x=np.expand_dims(x, axis=0)
-            images = np.vstack([x])
+            img=image.img_to_array(img)
+            img /= 255
+            img=np.expand_dims(img, axis=0)
+            img = np.vstack([img])
             
-            classes = model.predict(images, batch_size=10)
+            #classes = model.predict(img, batch_size=10)
+
+
+            uri = app.config['COVID19_URI']
+            api_key = app.config['COVID19_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            classes = np.array(data, dtype=np.float32)
+            
             percentage = round(classes[0][0] * 100, 2)
             if classes[0]>0.5:
                 prediction = "ايجابي"
@@ -407,7 +429,7 @@ def create_app(test_config=None):
             img = image.load_img(path, target_size=(256, 256))
             img=image.img_to_array(img)
             img=np.expand_dims(img, axis=0)
-            
+
             #pred = model.predict(x)
 
             uri = app.config['LUNG_CANCER_URI']
