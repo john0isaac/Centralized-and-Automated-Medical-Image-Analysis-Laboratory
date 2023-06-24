@@ -351,16 +351,26 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
-            model =  tf.keras.models.load_model(model_path)
+            #model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
+            #model =  tf.keras.models.load_model(model_path)
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             categories = ['Bengin case', 'Malignant case', 'Normal case']
 
             img = image.load_img(path, target_size=(256, 256))
-            x=image.img_to_array(img)
-            x=np.expand_dims(x, axis=0)
-            pred = model.predict(x)
+            img=image.img_to_array(img)
+            img=np.expand_dims(img, axis=0)
+            
+            #pred = model.predict(img)
+
+            uri = app.config['LUNG_CANCER_URI']
+            api_key = app.config['LUNG_CANCER_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            pred = np.array(data, dtype=np.float32)
 
             max_index = np.argmax(pred)
             # Convert the greatest number to percentage
@@ -388,16 +398,28 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
-            model =  tf.keras.models.load_model(model_path)
+            #model_path = os.path.join(os.getcwd(), app.config['LUNG_CANCER_PATH'])
+            #model =  tf.keras.models.load_model(model_path)
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             categories = ['ورم حميد', 'ورم خبيث', 'سلبي']
 
             img = image.load_img(path, target_size=(256, 256))
-            x=image.img_to_array(img)
-            x=np.expand_dims(x, axis=0)
-            pred = model.predict(x)
+            img=image.img_to_array(img)
+            img=np.expand_dims(img, axis=0)
+            
+            #pred = model.predict(x)
+
+            uri = app.config['LUNG_CANCER_URI']
+            api_key = app.config['LUNG_CANCER_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            pred = np.array(data, dtype=np.float32)
+
+            max_index = np.argmax(pred)
 
             max_index = np.argmax(pred)
             # Convert the greatest number to percentage

@@ -15,6 +15,8 @@ COVID19_PATH = os.environ.get('COVID19_PATH')
 
 PNEUMONIA_API_KEY = os.environ.get('PNEUMONIA_API_KEY')
 PNEUMONIA_URI = os.environ.get('PNEUMONIA_URI')
+LUNG_CANCER_API_KEY = os.environ.get('LUNG_CANCER_API_KEY')
+LUNG_CANCER_URI = os.environ.get('LUNG_CANCER_URI')
 
 DEBUG = True
 MAIL_SERVER = 'smtp.gmail.com'
