@@ -4,6 +4,8 @@ from flask_cors import CORS
 from flask_mail import Mail, Message
 from sqlalchemy import or_
 import numpy as np
+import json
+import requests
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 from skimage import measure
@@ -423,8 +425,8 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
-            model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+            #model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
+            #model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
@@ -432,9 +434,19 @@ def create_app(test_config=None):
             img = image.img_to_array(img)
 
             img=np.expand_dims(img, axis=0)
+            
+            #classes = model.predict(img, batch_size=1)
+            uri = app.config['PNEUMONIA_URI']
+            api_key = app.config['PNEUMONIA_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
-            classes = model.predict(img, batch_size=1)
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            classes = np.array(data, dtype=np.float32)
+
             classes = np.squeeze(classes, axis=0)
+
             pred = resize(classes, (1024, 1024), mode='reflect')
             comp = pred[:, :, 0] > 0.5
             # apply connected components
@@ -476,8 +488,8 @@ def create_app(test_config=None):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
-            model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
+            #model_path = os.path.join(os.getcwd(), app.config['PNEUMONIA_PATH'])
+            #model =  tf.keras.models.load_model(model_path, custom_objects={'iou_bce_loss':iou_bce_loss, 'mean_iou': mean_iou, 'iou_loss': iou_loss})
 
             path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             img = image.load_img(path, target_size=(256, 256), color_mode="grayscale")
@@ -486,8 +498,18 @@ def create_app(test_config=None):
 
             img=np.expand_dims(img, axis=0)
 
-            classes = model.predict(img, batch_size=1)
+            #classes = model.predict(img, batch_size=1)
+            uri = app.config['PNEUMONIA_URI']
+            api_key = app.config['PNEUMONIA_API_KEY']
+            headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+            request_data = json.dumps({'input_image': img.tolist()})
+            response = requests.post(uri, headers=headers, data=request_data)
+            data = json.loads(response.text)["output_image"]
+            classes = np.array(data, dtype=np.float32)
+
             classes = np.squeeze(classes, axis=0)
+
             pred = resize(classes, (1024, 1024), mode='reflect')
             comp = pred[:, :, 0] > 0.5
             # apply connected components
