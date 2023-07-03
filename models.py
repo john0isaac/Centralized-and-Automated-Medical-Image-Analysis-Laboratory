@@ -4,11 +4,11 @@ import os
 from sqlalchemy.sql import func
 
 # For using locally
-database_name = 'test'
-database_path = "postgres://{}@{}/{}".format('root:Passw0rd', 'localhost:5432', database_name)
+#database_name = 'test'
+#database_path = "postgres://{}@{}/{}".format('root:Passw0rd', 'localhost:5432', database_name)
 
 # For production
-#database_path = os.environ['CLEARDB_DATABASE_URL']
+database_path = os.environ['CLEARDB_DATABASE_URL']
 
 db = SQLAlchemy()
 
