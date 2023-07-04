@@ -132,8 +132,6 @@ dmypy.json
 .vscode/
 /.vs/
 
-/static/uploads/
-
 vars.env
 
 csr.txt
