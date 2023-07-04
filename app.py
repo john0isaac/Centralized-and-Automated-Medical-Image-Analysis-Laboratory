@@ -3,6 +3,7 @@ from flask import Flask, request, render_template, redirect, abort, jsonify, fla
 from flask_cors import CORS
 from flask_mail import Mail, Message
 from sqlalchemy import or_
+from models import setup_db
 import numpy as np
 import json
 import requests
@@ -51,7 +52,7 @@ def create_app(test_config=None):
     # Create and configure the app
     app = Flask(__name__)
     app.config.from_pyfile('settings.py')
-    #setup_db(app)
+    setup_db(app)
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     mail = Mail(app)
