@@ -139,3 +139,5 @@ vars.env
 csr.txt
 certificate.txt
 private_key.txt
+
+*.h5
