@@ -52,7 +52,7 @@ def create_app(test_config=None):
     # Create and configure the app
     app = Flask(__name__)
     app.config.from_pyfile('settings.py')
-    setup_db(app)
+    # setup_db(app)
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     mail = Mail(app)
